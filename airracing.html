@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Air Racing - Nikhil Suresh</title>
+		<link rel='stylesheet' href='style.css'/>
+		<link href='http://fonts.googleapis.com/css?family=Aldrich|Metrophobic|Roboto:400,700|News+Cycle:400,700' rel='stylesheet' type='text/css'>		
+		
+    <link rel="stylesheet" href="./svwp_style.css" type="text/css" media="screen" /> 
+    <script src="./jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script src="./jquery.timers.js" type="text/javascript"></script> 
+    <script src="./jquery.slideViewerPro.1.5.js" type="text/javascript"></script> 
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-29867202-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</head>
+	<body>
+        <a href="./index.html"><img src='images/studiologo-full.png' width='200' style='text-align: center'/></a>
+<!-- 		<div id='top' onmouseover='switchToNikhil();' onmouseout='switchToNKL()'>
+				<a href='http://twitter.com/nklsrh/' target='_blank'><img src='twt.png'/></a>
+			<span id='name'>
+				NKL
+			</span>
+		</div> -->
+		<!--div id='blackBar'><br></div-->
+		<div style='margin-top: 20px; margin-bottom: 20px'>
+			<div id="latest">
+				<div id="screenshots" class="svwp">
+					<ul>
+						<li><img width="700" height="400" alt="" src="./screenies/ar (2).jpg" /></li>
+						<li><img width="700" height="400" alt="" src="./screenies/ar (1).jpg" /></li>
+						<li><img width="700" height="400" alt="" src="./screenies/ar (3).jpg" /></li>
+						<li><img width="700" height="400" alt="" src="./screenies/ar (4).jpg" /></li>
+					</ul>
+				</div> 
+			</div> 
+			<div id='intro'>
+				<h2>Air Racing</h2>
+				<strong>Free download: </strong>
+				<a target="_blank" href="http://www.windowsphone.com/en-us/store/app/air-racing/127a1d04-f022-42a7-9992-a4278e7f43e5">Windows Phone<a/>
+				<a target="_blank" href="https://play.google.com/store/apps/details?id=com.nklsrh.airracing">Android<a/>
+				<a target="_blank" href="http://apps.microsoft.com/windows/en-au/app/air-racing/a618efa9-455b-4dc3-a7ca-607f07229490">Windows Store<a/>
+				<p>
+				Fly 2 of the fastest raceplanes in the world at ridiculous speeds whilst maneuvering between tight air gates in a short but challenging course!				
+				
+				<p class="backgroundinfo">
+				Part of a collection that won the Microsoft Appreneur competition in 2013.
+				Created over a month, alongside work on DownForce and other titles.
+				<br><br>
+				Built with Unity 4 Free. Uses custom flight controls, menus, and checkpointing system.
+				</p>
+				<h4>Development</h4>
+				<p class="backgroundinfo">
+				I was watching the Red Bull Air Race, when I realised it would work amazingly well as a video game. I'm a big fan of the precision needed to 
+				accurately fly through those pylons, so I tried modeling a game that replicated that 'knife-edge' feeling!
+				<br><br>
+				The lighting and aesthetic of this game is something I'm very proud of. It's hard to make something look
+				pretty in Unity Free without being experienced in the tools and techniques used. For my first ever complex 3D game
+				in Unity, this is a game that stands up very well for itself.
+				<br><br>
+				I'm looking into options to make a larger, more professional and polished version of this game. Perhaps even for consoles like the PlayStation Vita!
+				</p>
+			</div>
+		</div>
+		<a href="./index.html"><img src='images/studiologo-full.png' width='200' style='text-align: center'/></a>
+
+	</body>
+	<script>
+		function switchToNikhil () {
+			document.getElementById ("name").innerHTML = "NIKHIL SURESH";
+		}
+		function switchToNKL () {
+			document.getElementById ("name").innerHTML = "NKLSRH";
+		}
+		$(window).bind("load", function() {
+		$("div#screenshots").slideViewerPro({
+		thumbs: 4,
+		autoslide: true,
+		asTimer: 3500,
+		typo: false,
+		galBorderWidth: 0,
+		thumbsBorderOpacity: 0,
+		buttonsTextColor: "#FFF",
+		buttonsWidth: 100,
+		thumbsActiveBorderOpacity: 1,
+		thumbsActiveBorderColor: "#FF5000",
+		shuffle: false
+		});
+		}); 
+	</script>
+</html>

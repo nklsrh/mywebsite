@@ -1,0 +1,106 @@
+body {
+	background-color: #dedede;
+	font-family: 'News Cycle', Arial, Helvetica, sans-serif;
+	margin: 0;
+	margin-top: 20px;
+	background-image: url('bg.png');
+}
+
+#top {
+	font-family: 'Aldrich', sans-serif;
+	background-color: #ff6000;
+	color: #fff;
+	font-size: 3em;
+	padding-left: 0.4em;
+	cursor: pointer;
+}
+#top img {
+	height: 1.2em;
+	top: 10%;
+	vertical-align: -20%;
+}
+#top img:hover{
+	background-color: #000;
+}
+
+#name{
+	cursor: default;
+}
+
+#blackBar {
+	background-color: #000;
+}
+
+#intro {
+	background-color: #fff;
+	padding: 1em;
+	padding-bottom: 2em;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 20px;
+	/*box-shadow: 0em 0em 20px 0.2px #999;*/
+}
+#intro img {
+	float:right;
+	margin: 0px;
+	margin-right: -10px;
+	margin-left: 20px;
+}
+
+h1 {
+	font-family: 'Aldrich', sans-serif;
+}
+h2 {
+	font-family: 'Aldrich', sans-serif;
+}
+iframe {
+	width: 100%;
+	height: 300px;
+}
+
+#sc{
+	background-color: #80FF00;
+}
+#sc img{
+	position:relative;
+	width: 50%;
+	left: 25%;
+}
+#axr {
+	background-color: #ff9000;
+}
+#bouncy{
+	background-color: #d6eb76;
+}
+#win8{
+	background-color: #2693FF;
+}
+#barena{
+	background-color: #FFDFBF;
+}
+
+.game {
+	margin-top: 1em;
+	margin-bottom: 5em;
+	margin-left: 22%;
+	margin-right: 22%;
+	/*box-shadow: 0em 0em 20px 0.2px #999;
+	border-style: solid;
+	border-width:1px;
+	border-color: #ffbf90;*/
+}
+.game img {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.game h1{
+	text-align: center;
+	line-height: 3em;
+	margin-bottom: 0;
+}
+.game p {
+	padding: 2em;
+	margin: 0;
+	padding-top: 0;
+}

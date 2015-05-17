@@ -1,0 +1,154 @@
+body {
+	background-color: #dedede;
+	font-family: 'News Cycle', Arial, Helvetica, sans-serif;
+	margin: 0;
+	margin-top: 20px;
+	background-image: url('bg.png');
+    text-align: center;
+}
+
+#top {
+	font-family: 'Aldrich', sans-serif;
+	background-color: #ff6000;
+	color: #fff;
+	font-size: 3em;
+	padding-left: 0.4em;
+	cursor: pointer;
+}
+#top img {
+	height: 1.2em;
+	top: 10%;
+	vertical-align: -20%;
+}
+#top img:hover{
+	background-color: #000;
+}
+
+#name{
+	cursor: default;
+}
+
+#blackBar {
+	background-color: #000;
+}
+
+#intro {
+	background-color: #fff;
+	padding: 1em;
+	padding-bottom: 2em;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 20px;
+    text-align: left;
+	/*box-shadow: 0em 0em 20px 0.2px #999;*/
+}
+#intro img {
+	float:right;
+	margin: 0px;
+	margin-right: -10px;
+	margin-left: 20px;
+}
+
+h1 {
+	font-family: 'Aldrich', sans-serif;
+}
+h2 {
+	font-family: 'Aldrich', sans-serif;
+}
+iframe {
+	width: 100%;
+	height: 300px;
+}
+#sc {
+	background-image: url('./games/supercricket.png');
+}
+#sc:hover {
+	background-image: url('./games/supercricket-about.png');
+}
+#sc2 {
+	background-image: url('./games/supercricket2.png');
+}
+#sc2:hover {
+	background-image: url('./games/supercricket2-about.png');
+}
+#blastr {
+    width: 314px;
+    height: 182px;
+	background-image: url('./games/blastr.png');
+	background-size: 100% auto;
+}
+#blastr:hover {
+	background-image: url('./games/blastr-about.png');
+	background-size: 100% auto;
+}
+#mechfall{
+	background-image: url('./games/0.png');
+}
+#mechfall:hover {
+	background-image: url('./games/mechfall-about.png');
+}
+#airracing{
+	background-image: url('./games/airracing.png');
+}
+#airracing:hover {
+	background-image: url('./games/airracing-about.png');
+}
+#cargo{
+	background-image: url('./games/cargo_1920.png');
+	background-size: 100% auto;
+}
+#cargo:hover {
+	background-image: url('./games/cargo-about.png');
+}
+#downforce{
+	background-image: url('./games/downforce.png');
+}
+#downforce:hover {
+	background-image: url('./games/downforce-about.png');
+}
+#bouncy {
+	background-image: url('./games/bouncy.png');
+}
+#bouncy:hover {
+	background-image: url('./games/bouncy-about.png');
+}
+
+.game {
+/* 	margin-top: 1em;
+	margin-bottom: 5em;
+	margin-left: 22%;
+	margin-right: 22%; */
+	background-size: 100% auto;
+}
+.game img {
+    width: 314px;
+    height: 182px;
+    margin: 10px;
+	box-shadow: 0em 0em 20px 0.2px #999;
+	background-size: 100% auto;
+}
+.game .icon {
+    width: 314px;
+    height: 182px;
+    margin: 10px;
+	box-shadow: 0em 0em 20px 0.2px #999;
+	background-size: 100% auto;
+	display: inline-block;
+}
+#latest 
+{
+    display: inline-block;
+}
+
+.backgroundinfo {
+	font-size: 0.9em;
+}
+
+.icons {
+	height: 64px;
+	padding: 20px;
+}
+.icons2 {
+	height: 28px;
+	padding: 20px;
+}

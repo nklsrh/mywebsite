@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CARGO: Locked and Loaded - Nikhil Suresh</title>
+		<link rel='stylesheet' href='style.css'/>
+		<link href='http://fonts.googleapis.com/css?family=Aldrich|Metrophobic|Roboto:400,700|News+Cycle:400,700' rel='stylesheet' type='text/css'>		
+		
+    <link rel="stylesheet" href="./svwp_style.css" type="text/css" media="screen" /> 
+    <script src="./jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script src="./jquery.timers.js" type="text/javascript"></script> 
+    <script src="./jquery.slideViewerPro.1.5.js" type="text/javascript"></script> 
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-29867202-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</head>
+	<body>
+        <a href="./index.html"><img src='images/studiologo-full.png' width='200' style='text-align: center'/></a>
+
+		<div style='margin-top: 20px; margin-bottom: 20px'>			
+
+			<div id="latest">					
+
+				<div id="screenshots" class="svwp">
+					<ul>
+						<li><img width="700" height="400" alt="" src="./screenies/ca.jpg" /></li>
+						<li><img width="700" height="400" alt="" src="./screenies/ca 3.jpg" /></li>
+						<li><img width="700" height="400" alt="" src="./screenies/ca 2.jpg" /></li>
+						<li><img width="700" height="400" alt="" src="./screenies/ca 4.jpg" /></li>
+					</ul>
+				</div> 
+			</div> 
+			
+			<div id='intro'>
+
+				<h2>CARGO: Locked and Loaded</h2>
+				
+				<iframe width="853" height="480" src="https://www.youtube-nocookie.com/embed/jmsj0I1SxFU?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+				<strong>Free download: </strong>
+				<a target="_blank" href="http://apps.microsoft.com/windows/en-us/app/cargo-locked-and-loaded/32809535-c674-44c4-9ef5-f01f6ead3eca">Windows Store<a/>
+				<p>
+					Pirates have their eyes set on hijacking the massive cargo freighter, the 'Sea Star', and holding all the crew hostage. Only one person can stop them.<br>
+					You.<br>
+					Enjoy a mini-adventure inspired by AAA-blockbuster titles! Wreak havoc on your unsuspecting foes as you try to regain control of the ship.				
+				<p class="backgroundinfo">				
+				Created over a month, as an experiment to bring Uncharted-style atmosphere to a top-down shooter.
+				<br><br>
+				Built with Unity 4 Free. Uses custom movement, weapons, menus, and enemy AI system.
+				</p>
+				<h4>Development</h4>
+				<p class="backgroundinfo">
+					Having just completed a marathon of the Uncharted series on PS3, I was inspired to explore that aesthetic and atmosphere in my own games.
+					Only a couple of weeks into development did I realise how immense the task was! Creating an action-adventure starring human characters is a lot of work!
+				<br><br>
+					Having never worked with human characters before, this was uncharted territory (hah!) for me. Character animations, keyframing, and using Mecanim was a part of the development process.
+					I also implemented a dynamic camera system that mixed a realtime approach to following the character, but also utilised pre-built camera patterns when in 
+					special locations (the wide zoom-pan whilst traversing the edge of the ship is one)
+				<br><br>
+					This kind of game requires a lot of resources and time to put together well. I'd love to return to this universe and develop the character and story further in the future.
+				</p>
+			</div>
+		</div>
+		<a href="./index.html"><img src='images/studiologo-full.png' width='200' style='text-align: center'/></a>
+
+	</body>
+	<script>
+		function switchToNikhil () {
+			document.getElementById ("name").innerHTML = "NIKHIL SURESH";
+		}
+		function switchToNKL () {
+			document.getElementById ("name").innerHTML = "NKLSRH";
+		}
+		$(window).bind("load", function() {
+		$("div#screenshots").slideViewerPro({
+		thumbs: 4,
+		autoslide: true,
+		asTimer: 3500,
+		typo: false,
+		galBorderWidth: 0,
+		thumbsBorderOpacity: 0,
+		buttonsTextColor: "#FFF",
+		buttonsWidth: 100,
+		thumbsActiveBorderOpacity: 1,
+		thumbsActiveBorderColor: "#FF5000",
+		shuffle: false
+		});
+		}); 
+	</script>
+</html>
