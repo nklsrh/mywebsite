@@ -1,6 +1,7 @@
 body {
 	background-color: #dedede;
 	font-family: 'News Cycle', Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
 	margin: 0;
 	margin-top: 20px;
 	background-image: url('bg.png');
@@ -8,7 +9,7 @@ body {
 }
 
 #top {
-	font-family: 'Aldrich', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	background-color: #ff6000;
 	color: #fff;
 	font-size: 3em;
@@ -32,28 +33,48 @@ body {
 	background-color: #000;
 }
 
-#intro {
+#resume {
 	background-color: #fff;
 	padding: 1em;
 	padding-bottom: 2em;
-	margin-left: 20%;
-	margin-right: 20%;
+	margin-left: 15%;
+	margin-right: 15%;
 	margin-top: 20px;
     text-align: left;
 	/*box-shadow: 0em 0em 20px 0.2px #999;*/
 }
-#intro img {
+#resume img {
 	float:right;
 	margin: 0px;
 	margin-right: -10px;
 	margin-left: 20px;
 }
+#resume a {
+    color:  #ff6000
+}
 
 h1 {
 	font-family: 'Aldrich', sans-serif;
+	font-size: 3em;
 }
 h2 {
 	font-family: 'Aldrich', sans-serif;
+	font-size: 1.9em;
+}
+h3 {
+	font-family: 'Aldrich', sans-serif;
+	font-size: 1.3em;
+}
+h4 {
+	font-family: 'Aldrich', sans-serif;
+}
+h5 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.6em;
+	padding: 0;
+	margin: 0;
+	margin-top: -20px;
+	margin-left: 10px;
 }
 iframe {
 	width: 100%;
@@ -112,6 +133,34 @@ iframe {
 #bouncy:hover {
 	background-image: url('./games/bouncy-about.png');
 }
+#thumbdrift{
+	background-image: url('./games/thumbdrift.png');
+	background-size: 100% auto;
+}
+#thumbdrift:hover {
+	background-image: url('./games/thumbdrift-about.png');
+}
+#ds{
+	background-image: url('./games/ds.png');
+	background-size: 100% auto;
+}
+#ds:hover {
+	background-image: url('./games/ds-about.png');
+}
+#risk{
+	background-image: url('./games/risk.png');
+	background-size: 100% auto;
+}
+#risk:hover {
+	background-image: url('./games/risk-about.png');
+}
+#oml{
+	background-image: url('./games/oml.png');
+	background-size: 100% auto;
+}
+#oml:hover {
+	background-image: url('./games/oml-about.png');
+}
 
 .game {
 /* 	margin-top: 1em;
@@ -151,4 +200,210 @@ iframe {
 .icons2 {
 	height: 28px;
 	padding: 20px;
+}
+.bannerimg{
+	width: 100%;
+  	max-height:120px;
+  	background-size: cover;
+}
+.pl {
+	font-size: 0.7em;
+}
+
+
+.sectional {
+    background-color:  #f0f0f0;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.sectional:hover {
+    background-color:  #dedede;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.sectional2 {
+    background-color:  #f7f7f7;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.sectional2:hover {
+    background-color:  #dedede;
+}
+
+.wall {
+    background-color:  #ff6000;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.studiologo {
+    margin: 10px;
+    width: 128px;
+    height: 128px;
+}
+
+
+#allgames {
+	color: white;
+	font-size: 2em;
+	text-align: center;
+	text-decoration: none;
+}
+#allgames a {
+	color: white;
+	text-decoration: none;
+}
+
+.worksection{
+	background-color: #fff;
+	padding: 1em;
+	padding-bottom: 2em;
+	margin-left: 11%;
+	margin-right: 11%;
+	margin-top: 20px;
+    text-align: left;
+	/*box-shadow: 0em 0em 20px 0.2px #999;*/
+}
+
+.smgsection {
+  	background-size: cover;
+  	padding-top: 220px;
+  	padding-bottom: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.9) 70%), 
+  	url(games/ds.png) repeat 0 0;
+  	background-origin: content-box;
+  	color: black;
+  	padding-left: 10px;
+  	padding-right: 10px;
+  	/*filter: blur(2px);*/
+}
+.smgsection:before {
+  	filter: blur(12px);
+}
+.smgsection a {
+  	color: #ff6000;
+}
+
+#intro {
+  	background-size: cover;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.98) 6%), 
+  	url(images/website-smg-work.png) fixed 0 0;
+}
+#game_deathsquared {
+  	background-size: cover;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
+  	url(games/ds.png) fixed 50% 0;
+}
+#game_thumbdrift {
+  	background-size: cover;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
+  	url(games/thumbdrift.png) fixed 50% 0;
+}
+#game_tdtvos {
+  	background-size: cover;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
+  	url(games/thumbdrifttvos.png) fixed 50% 0;
+}
+#game_onemoreline {
+  	background-size: cover;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
+  	url(games/oml.png) fixed 50% 0;
+}
+#game_risk {
+  	background-size: cover;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
+  	url(games/risk.png) fixed 50% 0;
+}
+#game_omd {
+  	background-size: repeat;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
+  	url(games/omd.png) fixed 50% 0;
+}
+.smgsection .sectioncard {
+    width: 314px;
+    height: 182px;
+	box-shadow: 0em 0em 20px 0.2px #999;
+	background-size: 100% auto;
+	top: -100px;
+}
+.smgsection .sectioncard2 {
+    width: 314px;
+    height: 182px;
+	box-shadow: 0em 0em 20px 0.2px #999;
+	background-size: 100% auto;
+	top: -100px;
+	text-align: right;
+}
+
+
+#introhome {
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, #dedede 0%, #fefefe 17%), 
+  	 repeat 0 0;
+}
+#game_blastr {
+  	background-size: repeat;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
+  	url(games/blastr.png) fixed 50% 0;
+}
+#game_sc2 {
+  	background-size: repeat;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
+  	url(games/supercricket2.png) fixed 50% 0;
+}
+#game_airracing {
+  	background-size: repeat;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
+  	url(games/airracing.png) fixed 50% 0;
+}
+#game_cargo {
+  	background-size: repeat;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
+  	url(games/cargo.png) fixed 50% 0;
+}
+#game_downforce {
+  	background-size: repeat;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
+  	url(games/downforce.png) fixed 50% 0;
+}
+#game_bouncy {
+  	background-size: repeat;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
+  	url(games/bouncy.png) fixed 50% 0;
+}
+
+
+
+.floater {
+    background-color:  #ff6000;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    text-decoration: none;
+}
+.floater a{
+	color: white;
+}
+.floater strong{
+}
+.floater br{
+	line-height: 10px;
 }
