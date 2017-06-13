@@ -223,7 +223,6 @@ iframe {
     margin-top: 10px;
     margin-bottom: 20px;
 }
-
 .sectional2 {
     background-color:  #f7f7f7;
     padding: 10px;
@@ -232,6 +231,12 @@ iframe {
 }
 .sectional2:hover {
     background-color:  #dedede;
+}
+#linkout a {
+	background-color: #ff6000;
+	margin: 0px;
+	padding: 10px;
+	color: white !important; 
 }
 
 .wall {
@@ -357,37 +362,37 @@ iframe {
   	background-size: repeat;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
-  	url(games/blastr.png) fixed 50% 0;
+  	url(games/blastr.png) repeat 50% 0;
 }
 #game_sc2 {
   	background-size: repeat;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
-  	url(games/supercricket2.png) fixed 50% 0;
+  	url(games/supercricket2.png) repeat 50% 0;
 }
 #game_airracing {
   	background-size: repeat;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
-  	url(games/airracing.png) fixed 50% 0;
+  	url(games/airracing.png) repeat 50% 0;
 }
 #game_cargo {
   	background-size: repeat;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
-  	url(games/cargo.png) fixed 50% 0;
+  	url(games/cargo.png) repeat 50% 0;
 }
 #game_downforce {
   	background-size: repeat;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
-  	url(games/downforce.png) fixed 50% 0;
+  	url(games/downforce.png) repeat 50% 0;
 }
 #game_bouncy {
   	background-size: repeat;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
-  	url(games/bouncy.png) fixed 50% 0;
+  	url(games/bouncy.png) repeat 50% 0;
 }
 
 
@@ -406,4 +411,15 @@ iframe {
 }
 .floater br{
 	line-height: 10px;
+}
+
+#footer {
+	position: fixed;
+	bottom: -10px;
+	padding: 0px;
+   	width:100%;
+	background-image: url('bg.png');
+}
+#footer img {
+	height: 1.0em;
 }
