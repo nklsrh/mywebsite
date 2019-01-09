@@ -315,23 +315,29 @@ iframe {
   	url(images/website-smg-work.png) fixed 0 0;
 }
 
+#introspace {
+  	background-size: cover;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,120,0,0.8) 0%, rgba(255,255,255,1) 22%) 0 0;
+}
+
 #game_transformers {
   	background-size: cover;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
-  	url(games/ds.png) fixed 50% 0;
+  	url(games/transformers.png) fixed 50% 0;
 }
 #game_fast {
   	background-size: cover;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
-  	url(games/ds.png) fixed 50% 0;
+  	url(games/fast.png) fixed 50% 0;
 }
 #game_deathsquared {
   	background-size: cover;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
-  	url(games/thumbdrift.png) fixed 50% 0;
+  	url(games/ds.png) fixed 50% 0;
 }
 #game_thumbdrift {
   	background-size: cover;
