@@ -1,0 +1,212 @@
+1 June 2017 - Get Ready for Allstars!
+
+The new Allstars Preview mode is in Beta. Join the Beta to manage your favourite club and sign your favourite players.
+
+---
+
+9 December 2016 - Women's Big Bash 2016 is here!
+
+Get the latest update to play the newest mode with superstars of the Women's game.
+
+|http://goo.gl/1ThFoy
+
+---
+
+1 December 2016 - Now on iPhone!
+
+Download SUPER CRICKET 2 on iPhone and iPod Touch for FREE today!
+The game is now available for free on the App Store!
+
+|http://goo.gl/ohsrmv
+
+---
+
+12 May 2016 - NPL 2016 is here!
+
+Enjoy playing with the new Gujarat and Pune teams in this year's IPL tournament.
+
+---
+
+2 May 2016 - NPL 2016 coming this week!
+
+Get ready to play with the best of the Premier League starting this week! 
+
+Join the beta for early updates.
+
+---
+
+8 April 2016 - WORLD T20 now available!
+
+Download the latest update for the 2016 tournament which also includes the brand new DAILY BATTING CHAMPIONS leaderboard for Google Play Games users!
+
+Can you top the leaderboard each day? Update the game and find out!
+
+---
+
+5 April 2016 - WORLD T20 in Beta!
+
+Get beta access and enjoy the brand new World T20 mode with Batting Champions daily leaderboards.
+Use your favourite players and smash your way to the daily highscore.
+
+---
+
+30 March 2016 - Fixes on the way
+
+An update will be out this week fixing a number of bugs (tutorial, Ashes, player names). Stay tuned.
+
+---
+
+25 March 2016 - New beta: Subcontinent vs World!
+
+Now available for all beta testers!
+
+- Choose your favourite star players from India, Pakistan, Sri Lanka and Bangladesh, as you take on the world's best international teams in a series of increasingly difficult challenges! Can you win them all?
+
+Let me know if you like it by sending me Feedback.
+
+---
+
+16 March 2016 - New update on the way!
+
+Get ready for some Subcontinental action in the newest update for SUPER CRICKET 2!
+Coming soon...
+
+---
+
+1 March 2016 - THUMB DRIFT released on iOS and Android
+
+My latest game, "THUMB DRIFT - One Touch Racing" is out on iOS and Android!
+Download my latest game for free, today!
+
+---
+
+21 December 2015 - AUSSIE BASH IS HERE!
+
+Download the latest update to play with your favourite Australian teams!
+Now also includes a 'News Ticker' feature with Man-Of-The-Match updates.
+The update also fixes issues with the Tutorial, Nets practice, and any issues with certain devices such as the Galaxy S6.
+
+---
+
+14 December 2015 - Aussie Bash update launching this week on BETA
+
+Join the beta group on Google+ to get early access to the Aussie Bash content!
+
+---
+
+7 December 2015 - AUSSIE BASH IS COMING!
+
+The next update will add the AUSSIE BASH tournament featuring your favourite stars from Down Under.
+Stay tuned for more...
+
+---
+
+1 October 2015 - Update 46
+
+This update adds the WORLD T2 championship
+- Play with the new Netherlands and Nepal teams
+- Also adds a scenario to Ashes
+- Fixes bugs with semi-finals in IPL
+- Fixes bugs with last-ball wins
+
+---
+
+3 August 2015 - Update 43
+
+This update fixes some issues with update 42
+- Fixed issue where the last ball is skipped
+- Fielders now drop the ball sometimes
+- Asus ZenFone should now be able to tap and start the game
+- Fixed Ashes scenario 1 where the third star is now achievable
+- Fixed Ashes scenario 1 where Root is no longer required to be not out to get a star
+- Fixed Ashes scenario 2 where Finn played for Australia
+- More performance optimisation for low-end devices
+
+---
+
+30 July 2015 - Update 39/40 Backlash
+
+A number of users have issues with this update, so I have submitted v42 which has fixed difficulty, and reverted the gameplay back to how it was in v35.
+
+---
+
+29 July 2015 - Ashes Update messed up
+
+Apologies, there's a couple of issues with version 39 that make it hard to play the game due to freezes.
+There will be a version 40 update today to fix those issues.
+
+---
+
+29 July 2015 - Ashes Update imminent!
+
+Join the BETA community to get early versions of the Ashes Scenarios!
+Search "Super Cricket" on Google+ and find the community!
+
+---
+
+20 July 2015 - Injury setback
+
+Sorry guys, I bruised my fingers while playing cricket (oh, the irony!) and will take a bit longer to deliver the next update.
+
+---
+
+14 July 2015 - Ashes Update update
+
+I'm still working hard on creating a unique Ashes experience. Instead of a long-winded series of Test matches, I've decided to build an ever-increasing list of scenarios that will reflect some of the fantastic events in Ashes history.
+
+The Multiplayer mode is still being worked on, and I will have more news about it in the next few weeks.
+
+---
+
+1 July 2015 - Exams over!
+
+Thanks for being patient. I haven't had time to answer feedback emails or work on the game in the last week, but development is in full swing now!
+I'm currrently working on The Ashes and will also optimise the game to use less CPU and memory, making your devices less hot!
+
+---
+
+23 June 2015 - Asia Cup bug fix
+
+In Asia Cup final, there is a bug which doesn't allow you to progress through. Please download update 35 which should fix the issue.
+
+---
+
+23 June 2015 - Asia Cup!
+
+I've added a small Asia Cup update as a thank you for your patience.
+The game was temporarily broken for a day as I upgraded the fielders, but it should work fine now.
+Everyone who updates to version 34 should get a one-time 250CR gift!
+
+---
+
+23 June 2015 - Fielding 2.1 update!
+
+There seems to be a problem where you can't score many singles or doubles
+due to the speed of the fielders. I've fixed that in update 34, available now.
+
+---
+
+22 June 2015 - Fielding 2.0 update
+
+The new update, version 33, should be out at 1200 GMT today.
+
+I've upgraded the fielders so they should chase the ball much better now.
+However, all the fielders run towards the ball. A lot of you think that looks silly, so
+I'm changing that.
+
+
+---
+
+22 June 2015 - Exam time!
+
+I'm currently doing my university exams, so there won't be an update for a couple of weeks.
+The next update will be ready by The Ashes, adding your favourite 1v1 test series to the game!
+
+---
+
+22 June 2015 - Quick-fix update
+
+This update fixes issues with Asus phones and others that crash after every match ends.
+It also makes fielder movements a little less stupid!
+I have begun work on 2 brand-new game modes that everyone should be able to enjoy!
+More news coming soon...

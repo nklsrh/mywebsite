@@ -1,0 +1,214 @@
+{
+  "name": "AshesScenarios",
+  "version": 1,
+  "matches": [
+    {
+      "name": "Root's Rescue",
+	  "matchID": "2015_Ashes_Day1_JoeRoot",
+	  "version": 4,
+	  "subtitle": "Overcome a poor start to score 400 for England (and score a century for Joe Root)",
+      "chasing": 28,
+      "defending": 27,
+      "overs": 10000,
+      "allowTies": false,
+      "pointsCount": false,
+      "difficultyMultiplier": 1.0,
+      "matchType": "TestMatch",
+      "ballType": 1,
+      "innings": [
+        {
+          "wicketsFallen" : 3,
+          "notOut": [2, 4],
+          "extras" : 0,
+          "battingStats" : [
+            [356, 6, 10, 1, 0, 23, 29],
+            [355, 20, 40, 3, 0, 349, 22],
+            [49, 16, 58, 8, 0, 0, 0],
+            [50, 1, 7, 0, 0, 28, 0],
+            [57, 0, 0, 0, 0, 0, 0],
+            [357, 0, 0, 0, 0, 0, 0],
+            [53, 0, 0, 0, 0, 0, 0],
+            [47, 0, 0, 0, 0, 0, 0],
+            [52, 0, 0, 0, 0, 0, 0],
+            [358, 0, 0, 0, 0, 0, 0],
+            [48, 0, 0, 0, 0, 0, 0]
+          ],
+		  "bowlers" : [28, 23, 24, 349, 30, 29, 354, 16, 27, 352, 22]
+        }
+      ],
+      "currentInning": 0,
+	  "win_allConditionsRequired": false,
+	  "winConditions" : [
+		{
+			"type": "ChaseTarget",
+			"value": 400
+		}		
+	  ],
+	  "lose_allConditionsRequired": false,
+	  "loseConditions" : [
+		{
+			"type": "BatterOut",
+			"value": 57
+		},		
+		{
+			"type": "WicketsLost",
+			"value": 10
+		}				
+	  ]
+	  "starsRequired": 0,
+	  "starGoals": [
+		{
+			"type": "PlayerScore",
+			"value": 100,
+			"secondaryValue": 57
+		},
+		{
+			"type": "PlayerScore",
+			"value": 150,
+			"secondaryValue": 57
+		},
+		{
+			"type": "WicketsLost",
+			"value": 4
+		}
+	  ]
+    },
+	{
+      "name": "Watto's Wonderful Comeback",
+	  "matchID": "2015_Ashes_Day3_Watto",
+	  "version": 4,
+	  "subtitle": "With Australia teetering on 264/5 after Day 2, use Shane Watson to overcome England's first inning score of 430",
+      "chasing": 27,
+      "defending": 28,
+      "overs": 10000,
+      "allowTies": false,
+      "pointsCount": false,
+      "difficultyMultiplier": 1.0,
+      "matchType": "TestMatch",
+      "ballType": 1,
+      "innings": [
+        {
+          "wicketsFallen" : 5,
+          "notOut": [6, 5],
+          "extras" : 15,
+          "battingStats" : [
+            [352, 95, 133, 11, 1, 358, 53],
+            [29, 17, 42, 3, 0, 48, 355],
+            [27, 33, 56, 5, 0, 47, 355],
+            [16, 38, 52, 4, 0, 47, 47],
+            [354, 31, 75, 6, 0, 357, 48],
+            [22, 0, 0, 0, 0, 0, 0],
+            [30, 29, 51, 1, 0, 0, 0],
+            [349, 6, 23, 0, 0, 0, 0],
+            [24, 0, 0, 0, 0, 0, 0],
+            [28, 0, 0, 0, 0, 0, 0],
+            [23, 0, 0, 0, 0, 0, 0],
+          ],
+		  "bowlers" : [48, 358, 52, 47, 53, 357, 57, 50, 49, 355, 356]
+        }
+      ],
+      "currentInning": 0,
+	  "win_allConditionsRequired": false,
+	  "winConditions" : [
+		{
+			"type": "ChaseTarget",
+			"value": 431
+		}		
+	  ],
+	  "lose_allConditionsRequired": false,
+	  "loseConditions" : [
+		{
+			"type": "BatterOut",
+			"value": 30
+		},		
+		{
+			"type": "WicketsLost",
+			"value": 10
+		}		
+	  ]
+	  "starsRequired": 2,
+	  "starGoals": [
+		{
+			"type": "PlayerScore",
+			"value": 100,
+			"secondaryValue": 30
+		},
+		{
+			"type": "PlayerScore",
+			"value": 150,
+			"secondaryValue": 30
+		},
+		{
+			"type": "WicketsLost",
+			"value": 5
+		}
+	  ]
+    },
+	{
+      "name": "Wood and the other tailender",
+	  "matchID": "2015_Ashes_Day4_WoodTailender",
+	  "version": 2,
+	  "subtitle": "From 237/9, score 300 with the two tail-enders",
+      "chasing": 28,
+      "defending": 27,
+      "overs": 10000,
+      "allowTies": false,
+      "pointsCount": false,
+      "difficultyMultiplier": 1.0,
+      "matchType": "TestMatch",
+      "ballType": 1,
+      "innings": [
+        {
+          "wicketsFallen" : 9,
+          "notOut": [9, 10],
+          "extras" : 0,
+          "battingStats" : [
+            [356, 37, 62, 1, 0, 349, 16],
+            [355, 12, 26, 3, 0, 28, 349],
+            [49, 0, 7, 8, 0, 23, 22],
+            [50, 60, 89, 11, 0, 24, 0],
+            [57, 60, 89, 9, 0, 23, 0],
+            [357, 42, 59, 9, 0, 28, 0],
+            [53, 7, 19, 0, 0, 349, 22],
+            [47, 15, 41, 2, 0, 24, 22],
+            [52, 4, 7, 1, 0, 349, 23],
+            [358, 0, 2, 0, 0, 0, 0],
+            [48, 0, 0, 0, 0, 0, 0]
+          ],
+		  "bowlers" : [28, 23, 24, 349, 30, 29, 354, 16, 27, 352, 22]
+        }
+      ],
+      "currentInning": 0,
+	  "win_allConditionsRequired": false,
+	  "winConditions" : [
+		{
+			"type": "ChaseTarget",
+			"value": 300
+		}		
+	  ],
+	  "lose_allConditionsRequired": false,
+	  "loseConditions" : [
+		{
+			"type": "WicketsLost",
+			"value": 10
+		}		
+	  ]
+	  "starsRequired": 6,
+	  "starGoals": [
+		{
+			"type": "BallsTaken",
+			"value": 100
+		},
+		{
+			"type": "BallsTaken",
+			"value": 50
+		},
+		{
+			"type": "PlayerScore",
+			"value": 50,
+			"secondaryValue": 358
+		}
+	  ]
+    }
+  ]
+}

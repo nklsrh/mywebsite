@@ -1,0 +1,360 @@
+ID,Firstname,Lastname,BatHand,Power,Timing,Composure,Aggression,BatOverall,Bowling,BowlSpeed,BowlSkill,Accuracy,BowlOverall,ShirtNo,Nationality,Preferred Name
+1,Mahendra Singh,Dhoni,R,96,88,97,92,94,Rmed,120,40,50,45,7,India,1
+2,Virat,Kohli,R,92,92,95,92,93,Rmed,108,66,71,69,18,India,1
+3,Ravichandran,Ashwin,R,70,87,75,74,77,Roff,88,86,89,88,99,India,1
+4,Stuart,Binny,R,84,78,80,84,81,Rmed,126,82,84,83,84,India,1
+5,Shikhar,Dhawan,L,91,87,77,94,85,Roff,77,45,60,53,25,India,1
+6,Ravindra,Jadeja,L,84,84,72,90,80,Loff,91,81,84,83,8,India,1
+7,Bhuvneshwar,Kumar,R,83,86,60,72,76,Rfast,131,83,89,86,15,India,0
+8,Axar,Patel,L,79,75,64,71,73,Loff,92,83,88,86,20,India,1
+9,Ajinkya,Rahane,R,84,90,78,83,84,Rmed,100,46,66,56,27,India,1
+10,Suresh,Raina,L,90,85,82,88,86,Roff,84,78,76,77,3,India,1
+11,Ambati,Rayudu,R,81,82,80,82,81,Roff,78,44,49,47,5,India,1
+12,Mohammed,Shami,R,66,59,58,60,61,Rfast,144,90,89,90,11,India,1
+13,Mohit,Sharma,R,46,51,66,52,54,Rfast,139,84,88,86,1,India,0
+14,Rohit,Sharma,R,91,95,86,89,91,Roff,84,59,70,65,45,India,0
+15,Umesh,Yadav,R,67,61,57,56,62,Rfast,147,85,82,84,19,India,1
+16,Michael,Clarke,R,81,88,90,82,86,Loff,81,84,80,82,23,Australia,1
+17,George,Bailey,R,87,84,85,87,85,Rmed,100,46,58,52,2,Australia,1
+18,Pat,Cummins,R,58,55,59,60,57,Rfast,150,85,84,85,30,Australia,1
+19,Xavier,Doherty,R,58,57,61,60,59,Loff,89,81,82,82,3,Australia,1
+20,James,Faulkner,R,86,83,97,90,89,Lfast,133,86,83,85,44,Australia,1
+21,Aaron,Finch,R,95,82,84,88,87,Loff,76,72,68,70,16,Australia,1
+22,Brad,Haddin,R,83,86,75,85,81,Rmed,100,31,37,34,57,Australia,1
+23,Josh,Hazlewood,L,45,52,50,48,49,Rfast,140,87,85,86,38,Australia,1
+24,Mitchell,Johnson,L,82,74,68,89,75,Lfast,150,92,88,90,25,Australia,1
+25,Mitch,Marsh,R,91,84,78,90,84,Rfast,137,76,83,80,8,Australia,0
+26,Glenn,Maxwell,R,95,90,68,99,84,Roff,86,83,80,82,32,Australia,1
+27,Steve,Smith,R,89,92,90,90,90,Rleg,79,78,70,74,49,Australia,1
+28,Mitchell,Starc,L,85,77,70,82,77,Lfast,152,95,94,95,56,Australia,1
+29,David,Warner,L,95,85,82,93,87,Rleg,82,75,70,73,31,Australia,1
+30,Shane,Watson,R,88,85,84,92,86,Rfast,132,82,83,83,33,Australia,1
+31,AB,de Villiers,R,96,98,95,95,96,Rmed,120,66,67,67,17,South Africa,1
+32,Hashim,Amla,R,91,94,93,92,93,Roff,75,58,52,55,1,South Africa,1
+33,Kyle,Abbott,R,80,64,63,44,69,Rfast,137,82,85,84,87,South Africa,1
+34,Farhaan,Behardien,R,76,77,75,85,76,Rmed,115,71,76,74,28,South Africa,1
+35,Quinton,de Kock,L,90,86,84,92,87,Rmed,100,31,31,31,12,South Africa,1
+36,Faf,du Plessis,R,88,90,93,88,90,Rleg,78,35,34,35,8,South Africa,1
+37,JP,Duminy,L,88,88,89,87,88,Roff,84,84,83,84,21,South Africa,1
+38,David,Miller,L,94,90,84,90,89,Roff,44,33,45,39,10,South Africa,1
+39,Morne,Morkel,L,81,66,46,59,64,Rfast,147,89,86,88,65,South Africa,1
+40,Wayne,Parnell,L,75,70,66,58,70,Rfast,140,81,78,80,94,South Africa,1
+41,Aaron,Phangiso,R,66,59,55,48,60,Loff,79,85,85,85,69,South Africa,1
+42,Vernon,Philander,R,80,82,70,80,77,Rfast,135,90,88,89,24,South Africa,1
+43,Rilee,Rossouw,L,83,85,74,86,81,Roff,75,51,44,48,27,South Africa,1
+44,Dale,Steyn,R,66,49,55,87,57,Rfast,145,92,90,91,8,South Africa,1
+45,Imran,Tahir,R,41,44,65,66,50,Rleg,82,89,88,89,99,South Africa,1
+46,Eoin,Morgan,L,88,85,87,90,87,Lmed,100,34,33,34,16,England,1
+47,Moeen,Ali,L,92,90,81,91,88,Roff,86,85,83,84,18,England,1
+48,James,Anderson,L,70,62,49,56,60,Rfast,141,85,89,87,9,England,1
+49,Gary,Ballance,L,83,81,83,82,82,Rleg,70,36,37,37,48,England,1
+50,Ian,Bell,R,87,93,90,86,90,Rmed,100,37,41,39,7,England,1
+51,Ravi,Bopara,R,88,85,82,84,85,Rmed,124,80,78,79,42,England,1
+52,Stuart,Broad,L,84,75,60,88,73,Rfast,141,88,86,87,8,England,1
+53,Jos,Buttler,R,92,84,86,90,87,Rmed,100,28,33,31,63,England,1
+54,Steven,Finn,R,64,52,49,44,55,Rfast,142,87,84,86,11,England,1
+55,Alex,Hales,R,93,81,77,90,84,Rmed,100,33,32,33,35,England,1
+56,Chris,Jordan,R,90,81,72,90,81,Rfast,143,86,81,84,34,England,1
+57,Joe,Root,R,88,92,90,88,90,Roff,76,77,81,79,5,England,1
+58,James,Taylor,R,84,85,85,88,85,Rleg,44,35,33,34,38,England,1
+59,James,Tredwell,L,77,44,68,60,63,Roff,70,86,84,85,53,England,1
+60,Chris,Woakes,R,81,75,72,84,76,Rfast,139,86,86,86,19,England,1
+61,Jason,Holder,R,88,86,75,86,83,Rfast,134,84,85,85,98,West Indies,1
+62,Sulieman,Benn,L,67,66,62,72,65,Loff,83,82,84,83,62,West Indies,1
+63,Darren,Bravo,L,84,91,86,85,87,Rmed,100,50,50,50,13,West Indies,1
+64,Jonathan,Carter,L,80,81,75,72,79,Rmed,100,50,50,50,78,West Indies,1
+65,Sheldon,Cottrell,R,45,52,47,62,48,Rfast,137,82,81,82,19,West Indies,1
+66,Chris,Gayle,L,97,93,85,94,92,Roff,86,80,81,81,45,West Indies,1
+67,Sunil,Narine,L,72,63,56,72,64,Roff,88,93,90,92,74,West Indies,1
+68,Denesh,Ramdin,R,81,78,78,84,79,Rmed,70,40,40,40,80,West Indies,1
+69,Kemar,Roach,R,67,58,59,82,61,Rfast,138,83,86,85,24,West Indies,1
+70,Andre,Russell,R,92,86,78,88,85,Rfast,138,85,82,84,12,West Indies,1
+71,Darren,Sammy,R,95,85,77,90,86,Rmed,126,81,76,79,88,West Indies,1
+72,Marlon,Samuels,R,88,85,82,87,85,Roff,85,80,78,79,7,West Indies,1
+73,Lendl,Simmons,R,82,84,84,83,83,Rmed,100,50,50,50,54,West Indies,1
+74,Dwayne,Smith,R,90,82,75,93,82,Rmed,123,74,75,75,50,West Indies,1
+75,Jerome,Taylor,R,83,67,64,83,71,Rfast,146,88,84,86,78,West Indies,1
+76,Brendon,McCullum,R,95,92,80,98,89,Rmed,115,65,63,64,42,New Zealand,1
+77,Kane,Williamson,R,87,92,93,86,91,Roff,85,83,81,82,22,New Zealand,1
+78,Corey,Anderson,L,95,84,77,90,85,Lfast,133,82,80,81,78,New Zealand,1
+79,Trent,Boult,R,76,54,53,73,61,Lfast,145,90,92,91,18,New Zealand,1
+80,Grant,Elliott,R,83,86,83,84,84,Rmed,125,76,80,78,88,New Zealand,1
+81,Martin,Guptill,R,90,86,83,88,86,Roff,78,65,68,67,31,New Zealand,1
+82,Tom,Latham,L,83,83,87,81,84,Rmed,100,50,50,50,23,New Zealand,1
+83,Mitchell,McClenaghan,L,80,63,49,78,64,Lfast,140,86,82,84,81,New Zealand,1
+84,Nathan,McCullum,R,83,82,80,82,82,Roff,92,76,83,80,15,New Zealand,1
+85,Kyle,Mills,R,58,67,70,58,65,Rfast,134,86,86,86,37,New Zealand,1
+86,Adam,Milne,R,75,62,51,75,63,Rfast,152,85,80,83,20,New Zealand,1
+87,Luke,Ronchi,R,90,85,74,93,83,Rmed,50,30,30,30,54,New Zealand,1
+88,Tim,Southee,R,87,72,60,94,73,Rfast,140,88,86,87,38,New Zealand,1
+89,Ross,Taylor,R,89,86,88,87,88,Roff,80,50,50,50,3,New Zealand,1
+90,Daniel,Vettori,L,81,81,85,86,82,Loff,84,92,90,91,11,New Zealand,1
+91,Angelo,Mathews,R,86,88,90,86,88,Rmed,128,82,81,82,69,Sri Lanka,1
+92,Lahiru,Thirimanne,L,84,85,81,82,83,Rmed,100,50,50,50,66,Sri Lanka,1
+93,Dinesh,Chandimal,R,83,84,84,86,84,Roff,75,50,50,50,36,Sri Lanka,1
+94,Tillakaratne,Dilshan,R,90,88,86,87,88,Roff,85,81,78,80,23,Sri Lanka,1
+95,Rangana,Herath,L,75,65,51,72,64,Loff,82,89,89,89,12,Sri Lanka,1
+96,Mahela,Jayawardene,R,85,93,86,84,88,Rmed,100,50,50,50,27,Sri Lanka,1
+97,Dimuth,Karunaratne,L,81,83,84,82,83,Rmed,100,50,50,50,21,Sri Lanka,1
+98,Nuwan,Kulasekara,R,80,74,72,81,75,Rfast,131,82,88,85,92,Sri Lanka,1
+99,Suranga,Lakmal,R,75,58,42,80,58,Rfast,137,83,80,82,82,Sri Lanka,1
+100,Lasith,Malinga,R,80,65,40,78,62,Rfast,142,91,89,90,99,Sri Lanka,1
+101,Jeevan,Mendis,L,80,81,69,82,77,Rleg,84,78,76,77,9,Sri Lanka,0
+102,Thisara,Perera,L,92,84,74,88,83,Rfast,134,81,82,82,1,Sri Lanka,1
+103,Dushmantha,Chameera,R,72,67,45,70,61,Rfast,143,80,77,79,30,Sri Lanka,1
+104,Kumar,Sangakkara,L,92,92,94,89,93,Roff,70,50,50,50,11,Sri Lanka,1
+105,Sachithra,Senanayake,R,76,67,59,72,67,Roff,93,82,84,83,18,Sri Lanka,1
+106,Misbah,ul-Haq,R,86,85,88,85,86,Rleg,75,50,50,50,22,Pakistan,1
+107,Shahid,Afridi,R,92,75,68,96,78,Rleg,94,85,85,85,10,Pakistan,1
+108,Ehsan,Adil,R,65,58,53,60,59,Rfast,136,78,80,79,91,Pakistan,1
+109,Sarfraz,Ahmed,R,88,85,82,90,85,Rmed,50,30,30,30,54,Pakistan,1
+110,Umar,Akmal,R,90,86,85,88,87,Rmed,50,30,30,30,3,Pakistan,1
+111,Mohammad,Hafeez,R,84,82,80,81,82,Roff,84,83,81,82,8,Pakistan,1
+112,Mohammad,Irfan,R,56,42,45,60,48,Lfast,144,89,84,87,76,Pakistan,1
+113,Rahat,Ali,R,42,48,51,48,47,Lfast,140,85,85,85,83,Pakistan,0
+114,Sohail,Khan,R,54,52,49,51,52,Rfast,138,82,81,82,14,Pakistan,0
+115,Younis,Khan,R,80,88,83,83,84,Rmed,100,50,50,50,75,Pakistan,0
+116,Sohaib,Masqood,R,81,84,80,83,82,Roff,75,50,50,50,92,Pakistan,1
+117,Wahab,Riaz,R,62,63,58,63,61,Lfast,154,87,89,88,47,Pakistan,1
+118,Yasir,Shah,R,60,58,59,57,59,Rleg,83,85,84,85,86,Pakistan,1
+119,Ahmed,Shehzad,R,86,85,80,87,84,Rleg,75,50,50,50,19,Pakistan,1
+120,Haris,Sohail,L,82,85,83,81,83,Loff,79,74,73,74,89,Pakistan,1
+121,Mashrafe,Mortaza,R,65,68,63,60,65,Rfast,132,85,86,86,2,Bangladesh,1
+122,Shakib,Al Hasan,L,87,85,84,86,85,Loff,88,88,87,88,75,Bangladesh,0
+123,Taskin,Ahmed,L,59,52,49,57,53,Rfast,142,86,83,85,3,Bangladesh,1
+124,Anamul,Haque,R,77,75,78,76,77,Rmed,100,30,30,30,66,Bangladesh,0
+125,Mominul,Haque,L,78,80,74,79,77,Loff,75,50,50,50,68,Bangladesh,0
+126,Al Amin,Hossain,R,53,57,49,48,53,Rfast,135,75,76,76,4,Bangladesh,0
+127,Nasir,Hossain,R,78,81,80,77,80,Roff,82,80,81,81,69,Bangladesh,0
+128,Rubel,Hossain,R,56,48,51,52,52,Rfast,146,85,82,84,43,Bangladesh,0
+129,Tamim,Iqbal,L,83,83,82,83,83,Roff,75,50,50,50,29,Bangladesh,1
+130,Taijul,Islam,L,53,58,48,59,53,Loff,85,83,82,83,12,Bangladesh,1
+131,Mohammad,Mahmudallah,R,84,85,83,81,84,Roff,88,78,82,80,30,Bangladesh,1
+132,Mushfiqur,Rahim,R,86,85,85,90,85,Rmed,100,30,30,30,15,Bangladesh,1
+133,Sabbir,Rahman,R,82,83,85,88,83,Rleg,80,76,73,75,1,Bangladesh,1
+134,Soumya,Sarkar,L,86,74,70,90,77,Rmed,125,72,74,73,11,Bangladesh,1
+135,Arafat,Sunny,L,61,58,62,71,60,Loff,82,76,80,78,6,Bangladesh,1
+136,Elton,Chigumbura,R,72,70,73,79,72,Rmed,120,71,68,70,47,Zimbabwe,1
+137,Regis,Chakabva,R,61,60,59,60,60,Roff,75,30,30,30,5,Zimbabwe,1
+138,Tendai,Chatara,R,58,53,50,59,54,Rfast,132,70,73,72,13,Zimbabwe,1
+139,Chamu,Chibhabha,R,60,59,58,66,59,Rmed,121,65,62,64,33,Zimbabwe,1
+140,Craig,Ervine,L,80,82,81,82,81,Roff,75,30,30,30,77,Zimbabwe,1
+141,Tafadzwa,Kamungozi,R,42,45,39,31,42,Rleg,79,65,68,67,98,Zimbabwe,1
+142,Hamilton,Masakadza,R,81,79,80,82,80,Rmed,125,68,69,69,3,Zimbabwe,1
+143,Stuart,Matsikenyeri,R,71,68,73,70,71,Roff,82,75,77,76,45,Zimbabwe,1
+144,Solomon,Mire,R,70,63,68,73,67,Rmed,123,68,69,69,26,Zimbabwe,1
+145,Tawanda,Mupariwa,R,51,42,48,49,47,Rfast,134,73,70,72,0,Zimbabwe,1
+146,Tinashe,Payangara,R,43,47,43,41,44,Rfast,133,76,78,77,48,Zimbabwe,1
+147,Sikandar,Raza,R,75,74,72,76,74,Rmed,115,60,62,61,24,Zimbabwe,1
+148,Brendon,Taylor,R,87,85,89,88,87,Roff,75,50,50,50,1,Zimbabwe,1
+149,Prosper,Utseya,R,65,68,71,73,68,Roff,91,79,80,80,52,Zimbabwe,1
+150,Sean,Williams,L,90,85,81,91,85,Loff,89,82,83,83,14,Zimbabwe,1
+151,Nikita,Miller,R,79,71,72,77,74,Loff,89,83,81,82,33,West Indies,1
+152,Rahat,Ali,R,40,44,77,47,54,Lfast,137,82,83,83,94,Pakistan,0
+153,Ishant,Sharma,R,46,51,66,52,54,Rfast,138,84,85,85,1,India,0
+154,William,Porterfield,L,77,80,86,77,81,Roff,72,58,48,53,6,Ireland,1
+155,Andrew,Balbirnie,R,69,74,73,76,72,Roff,77,59,45,52,63,Ireland,1
+156,Peter,Chase,R,63,58,57,77,59,Rmed,122,77,81,79,28,Ireland,1
+157,Alex,Cusack,R,71,70,68,72,70,Rfast,131,83,84,84,83,Ireland,1
+158,George,Dockrell,R,51,50,87,77,63,Loff,86,83,86,85,50,Ireland,1
+159,Ed,Joyce,L,74,83,85,80,81,Rmed,100,47,55,51,24,Ireland,1
+160,Andrew,McBrine,L,58,65,66,65,63,Roff,75,72,73,73,35,Ireland,1
+161,John,Mooney,L,68,71,70,75,70,Rmed,128,75,74,75,10,Ireland,1
+162,Kevin,O'Brien,R,83,74,72,89,76,Rmed,121,79,82,81,22,Ireland,1
+163,Niall,O'Brien,L,75,78,69,78,74,Rmed,110,33,36,35,72,Ireland,0
+164,Max,Sorensen,R,69,72,84,54,75,Rfast,134,76,81,79,26,Ireland,1
+165,Paul,Stirling,R,90,82,75,90,82,Roff,77,73,75,74,1,Ireland,1
+166,Stuart,Thompson,L,77,74,74,71,75,Rmed,124,66,67,67,17,Ireland,1
+167,Gary,Wilson,R,72,73,71,73,72,Rmed,109,44,48,46,14,Ireland,1
+168,Craig,Young,R,56,53,67,65,59,Rfast,136,86,83,85,44,Ireland,1
+169,Preston,Mommsen,R,75,74,77,78,75,Roff,89,47,45,46,1,Scotland,1
+170,Kyle,Coetzer,R,82,80,80,87,81,Rmed,123,65,62,64,15,Scotland,1
+171,Richie,Berrington,R,76,73,78,80,76,Rmed,127,66,68,67,44,Scotland,1
+172,Freddie,Coleman,R,71,69,69,77,70,Roff,94,54,48,51,6,Scotland,1
+173,Matthew,Cross,R,70,66,66,73,67,Rmed,106,44,47,46,9,Scotland,1
+174,Josh,Davey,R,73,63,59,77,65,Rfast,130,80,81,81,4,Scotland,1
+175,Alasdair,Evans,R,58,59,62,74,60,Rfast,133,71,65,68,45,Scotland,1
+176,Hamish,Gardiner,R,71,67,66,79,68,Rmed,117,39,45,42,48,Scotland,1
+177,Majid,Haq,L,61,52,55,83,56,Roff,73,70,80,75,77,Scotland,1
+178,Michael,Leask,R,57,55,53,88,55,Roff,83,66,69,68,29,Scotland,1
+179,Matthew,Machan,L,81,80,78,83,80,Roff,79,43,45,44,14,Scotland,1
+180,Calum,MacLeod,R,71,71,69,67,70,Rmed,126,45,51,48,10,Scotland,1
+181,Safyaan,Sharif,R,45,46,44,81,45,Rfast,131,69,72,71,50,Scotland,1
+182,Robert,Taylor,L,56,49,52,61,52,Lmed,120,68,73,71,42,Scotland,1
+183,Iain,Wardlaw,R,49,48,44,66,47,Lfast,134,75,78,77,8,Scotland,1
+184,Mohammad,Tauqir,R,76,78,79,78,78,Roff,89,77,80,79,1,UAE,1
+185,Kurram,Khan,L,80,81,79,87,80,Loff,78,62,61,62,2,UAE,0
+186,Fahad,Al Hashmi,R,55,56,62,67,58,Rfast,131,72,73,73,3,UAE,1
+187,Amjad,Ali,L,78,80,84,77,81,Rleg,82,52,51,52,4,UAE,0
+188,Shaiman,Anwar,R,78,82,80,84,80,Rmed,110,51,50,51,5,UAE,1
+189,Nasir,Aziz,R,63,61,58,77,61,Roff,80,59,65,62,6,UAE,1
+190,Andri,Berenger,R,66,67,59,74,64,Rmed,100,46,44,45,7,UAE,1
+191,Krishna,Chandran,R,61,60,52,79,58,Rmed,110,65,69,67,8,UAE,1
+192,Manjula,Guruge,R,62,64,66,83,64,Lfast,132,65,57,61,9,UAE,1
+193,Saqlain,Haider,L,55,52,57,88,55,Rmed,102,43,42,43,10,UAE,1
+194,Amjad,Javed,R,74,71,69,72,71,Rmed,127,74,76,75,11,UAE,1
+195,Rohan,Mustafa,L,67,63,61,67,64,Roff,84,67,68,68,12,UAE,1
+196,Mohammad,Naveed,R,59,60,58,81,59,Rfast,137,73,75,74,13,UAE,0
+197,Swapnil,Patil,R,66,62,55,61,61,Rmed,104,42,43,43,14,UAE,1
+198,Kamran,Shahzad,R,67,58,59,66,61,Rmed,109,68,69,69,15,UAE,1
+199,Mohammad,Nabi,R,78,77,82,78,79,Roff,83,75,71,73,1,Afghanistan,1
+200,Javed,Ahmadi,R,69,67,68,87,68,Roff,84,57,56,57,2,Afghanistan,1
+201,Aftab,Alam,R,66,61,60,67,62,Rmed,128,61,66,64,3,Afghanistan,1
+202,Mirwais,Ashraf,R,66,67,69,77,67,Rmed,127,74,70,72,4,Afghanistan,1
+203,Usman,Ghani,R,61,60,52,73,58,Rmed,110,52,51,52,5,Afghanistan,1
+204,Hamid,Hassan,R,66,64,68,77,66,Rfast,147,87,86,87,6,Afghanistan,1
+205,Nasir,Jamal,R,55,52,57,74,55,Rleg,85,48,47,48,7,Afghanistan,1
+206,Nawroz,Mangal,R,69,73,71,79,71,Roff,79,71,69,70,8,Afghanistan,1
+207,Gulbadin,Naib,R,58,57,59,83,58,Rfast,130,52,50,51,9,Afghanistan,1
+208,Samiullah,Shenwari,R,82,80,77,88,80,Rleg,82,79,84,82,10,Afghanistan,1
+209,Asghar,Stanikzai,R,71,72,70,72,71,Rmed,100,62,63,63,11,Afghanistan,1
+210,Najibullah,Zadran,L,58,48,70,67,59,Roff,78,47,45,46,12,Afghanistan,0
+211,Shapoor,Zadran,L,62,67,63,81,64,Lfast,141,83,86,85,13,Afghanistan,0
+212,Dawlat,Zadran,R,61,62,63,61,62,Rfast,144,82,84,83,14,Afghanistan,0
+213,Afsar,Zazai,R,59,55,57,66,57,Rmed,103,52,50,51,15,Afghanistan,1
+214,Ashish,Nehra,R,43,44,45,76,44,Lfast,133,78,79,79,64,India,1
+215,Michael,Hussey,L,85,86,85,79,85,Rmed,118,65,70,68,48,Australia,1
+216,Dwayne,Bravo,R,86,82,72,89,80,Rfast,132,83,84,84,47,West Indies,0
+217,Irfan,Pathan,L,73,73,71,75,72,Lfast,133,81,80,81,0,India,1
+218,Manish,Pandey,R,85,83,80,91,83,Roff,91,43,44,44,1,India,0
+219,Gautam,Gambhir,L,84,84,85,85,84,Rleg,95,45,43,44,23,India,1
+220,Robin,Uthappa,R,87,85,80,90,84,Rmed,100,39,33,36,37,India,1
+221,Chris,Lynn,R,86,84,80,90,83,Loff,95,34,45,40,50,Australia,1
+222,Suryakumar,Yadav,R,78,75,77,83,77,Rmed,100,25,36,31,212,India,1
+223,Vaibhav,Rawal,L,68,65,67,76,67,Rleg,90,40,45,43,0,India,1
+224,Yusuf,Pathan,R,89,76,75,84,80,Roff,78,75,76,76,24,India,0
+225,Ryan,ten Doeschate,R,82,84,82,68,83,Rmed,122,76,73,75,27,Netherlands,1
+226,James,Neesham,L,82,78,80,72,80,Rfast,133,76,72,74,47,New Zealand,1
+227,Johan,Botha,R,79,79,80,79,79,Roff,96,80,84,82,23,South Africa,1
+228,Azhar,Mahmood,R,75,74,78,72,76,Rmed,128,78,81,80,99,Pakistan,1
+229,Kuldeep,Yadav,L,50,66,45,33,54,Lleg,95,85,80,83,18,India,0
+230,Piyush,Chawla,L,70,72,76,70,73,Rleg,92,81,80,81,19,India,0
+231,KC,Cariappa,R,59,54,55,45,56,Rleg,90,85,75,80,21,India,1
+232,Brad,Hogg,L,71,75,74,77,73,Lleg,85,88,85,87,94,Australia,1
+233,Mithun,Manhas,R,73,67,69,68,70,Roff,75,69,67,68,12,India,1
+234,Ishwar,Pandey,R,54,55,56,53,55,Rfast,132,77,79,78,15,India,0
+235,Matt,Henry,R,58,55,54,57,56,Rfast,142,85,84,85,21,New Zealand,1
+236,Samuel,Badree,R,56,54,55,49,55,Rleg,89,82,77,80,77,West Indies,1
+237,Murali,Vijay,R,84,83,85,84,84,Roff,86,56,55,56,8,India,1
+238,Virender,Sehwag,R,88,83,79,92,83,Roff,86,72,70,71,00,India,1
+239,Wriddhiman,Saha,R,74,82,80,70,79,Rleg,54,44,34,39,6,India,1
+240,Anureet,Singh,R,64,65,67,78,65,Rfast,140,74,82,78,33,India,0
+241,Karanveer,Singh,R,66,62,59,72,62,Rleg,94,77,73,75,22,India,0
+242,Sandeep,Sharma,R,67,61,55,79,61,Rfast,133,79,81,80,66,India,0
+243,Shaun,Marsh,L,86,82,80,90,83,Loff,88,49,55,52,14,Australia,1
+244,Manan,Vohra,R,85,81,75,84,80,Rmed,100,48,52,50,54,India,1
+245,Shivam,Sharma,R,67,66,68,78,67,Roff,96,75,78,77,45,India,0
+246,Shardul,Thakur,R,65,62,61,66,63,Rmed,125,73,74,74,28,India,1
+247,Parvinder,Awana,R,67,70,68,69,68,Rfast,135,77,79,78,34,India,1
+248,Beuran,Hendricks,R,58,57,55,56,57,Lfast,138,77,82,80,0,South Africa,1
+249,Yogesh,Golwalkar,L,66,61,61,66,63,Rleg,99,55,64,60,0,India,1
+250,Rishi,Dhawan,R,69,70,66,88,68,Rmed,127,69,72,71,19,India,1
+251,Gurkeerat,Singh,R,71,70,70,77,70,Roff,88,45,55,50,29,India,0
+252,Nikhil,Naik,R,66,58,57,66,60,Roff,88,54,42,48,0,India,1
+253,Manoj,Tiwary,R,74,77,75,72,75,Rleg,83,45,40,43,5,India,0
+254,Mayank,Agarwal,R,68,67,65,75,67,Rmed,100,50,45,48,14,India,1
+255,Saurabh,Tiwary,L,67,66,69,65,67,Roff,76,46,44,45,15,India,0
+256,Kedar,Jadhav,R,76,65,64,87,68,Roff,74,47,45,46,18,India,1
+257,Shreyas,Iyer,R,80,77,76,84,78,Rleg,77,53,57,55,41,India,1
+258,Travis,Head,L,71,70,69,72,70,Loff,79,46,47,47,0,Australia,1
+259,Yuvraj,Singh,L,81,84,80,89,82,Loff,90,73,74,74,12,India,0
+260,Albie,Morkel,L,84,78,84,82,82,Rfast,135,75,70,73,81,South Africa,0
+261,Jayant,Yadav,R,64,63,67,66,65,Roff,87,65,66,66,19,India,0
+262,Marcus,Stoinis,R,69,66,67,69,67,Rmed,128,73,71,72,0,Australia,1
+263,CM,Gautam,R,80,78,79,78,79,Rmed,100,48,46,47,8,India,1
+264,Srikar,Bharat,R,64,67,63,68,65,Rmed,105,63,66,65,0,India,1
+265,Amit,Mishra,R,56,46,76,43,59,Rleg,82,81,83,82,7,India,1
+266,Dominic,Joseph,R,45,43,41,39,43,Rfast,132,77,76,77,9,India,1
+267,Nathan,Coulter-Nile,R,76,77,78,74,77,Rfast,135,87,83,85,13,Australia,1
+268,Zaheer,Khan,R,46,47,42,43,45,Lfast,135,83,85,84,34,India,0
+269,Jaydev,Unadkat,L,41,48,51,51,47,Lmed,127,76,77,77,77,India,1
+270,Shahbaz,Nadeem,R,38,37,46,43,40,Loff,88,78,77,78,88,India,1
+271,Gurinder,Sandhu,L,40,41,45,51,42,Rfast,137,80,81,81,28,Australia,1
+272,KK,Jiyas,R,32,31,35,37,33,Lleg,85,64,66,65,0,India,1
+273,Siddesh,Lad,R,67,65,64,63,65,Roff,76,74,73,74,7,India,1
+274,Ambati,Rayudu,R,71,74,76,73,74,Roff,87,45,44,45,9,India,1
+275,Unmukt,Chand,R,73,75,78,80,75,Roff,79,43,43,43,15,India,1
+276,Lendl,Simmons,R,81,79,76,74,79,Rmed,100,64,65,65,54,West Indies,1
+277,Aiden,Blizzard,L,85,78,73,90,79,Lmed,95,66,64,65,0,Australia,1
+278,Shreyas,Gopal,R,65,67,63,61,65,Rleg,85,64,69,67,19,India,1
+279,Kieron,Pollard,R,87,86,83,89,85,Rmed,120,81,78,80,55,West Indies,1
+280,Hardik,Pandya,R,48,61,63,66,57,Rmed,118,67,66,67,228,India,1
+281,Colin,Munro,L,91,78,70,94,80,Rmed,125,62,61,62,0,New Zealand,1
+282,Nitish,Rana,L,54,56,55,59,55,Roff,92,54,55,55,0,India,1
+283,Aditya,Tare,R,73,76,74,79,74,Rmed,100,57,60,59,27,India,1
+284,Parthiv,Patel,L,82,75,70,80,76,Lmed,100,43,54,49,72,India,0
+285,Harbhajan,Singh,R,68,66,68,64,67,Roff,83,84,85,85,3,India,0
+286,Jasprit,Bumrah,R,55,56,54,52,55,Rfast,133,68,66,67,12,India,1
+287,Jagadeesha,Suchith,L,65,48,45,43,53,Loff,71,68,64,66,16,India,1
+288,Vinay,Kumar,R,49,55,56,63,53,Rfast,134,74,69,72,23,India,0
+289,Pragyan,Ojha,L,55,54,51,48,53,Loff,87,85,83,84,30,India,1
+290,Pawan,Suyal,R,43,55,54,52,51,Lmed,125,66,71,69,33,India,1
+291,Marchant,de Lange,R,45,55,56,53,52,Rfast,149,75,72,74,90,South Africa,1
+292,Abhimanyu,Mithun,R,43,40,45,44,43,Rfast,134,68,66,67,0,India,1
+293,Akshay,Wakhare,R,44,45,46,55,45,Roff,89,61,58,60,0,India,1
+294,Karun,Nair,R,76,77,73,89,75,Roff,80,54,51,53,69,India,1
+295,Rajat,Bhatia,R,64,66,65,82,65,Rmed,110,61,66,64,1,India,1
+296,Deepak,Hooda,R,81,83,68,94,77,Roff,80,71,70,71,5,India,1
+297,Chris,Morris,R,68,66,65,83,66,Rfast,135,74,78,76,10,South Africa,1
+298,Dinesh,Salunkhe,R,66,67,68,88,67,Rleg,92,46,56,51,12,India,1
+299,Ankit,Sharma,L,35,43,65,61,48,Loff,89,68,67,68,18,India,1
+300,Abhishek,Nayar,L,77,76,72,80,75,Rmed,129,74,72,73,25,India,1
+301,Pardeep,Sahu,R,56,55,54,53,55,Rleg,89,56,54,55,0,India,1
+302,Sagar,Trivedi,R,56,54,53,54,54,Rmed,109,68,63,66,0,India,1
+303,Sanju,Samson,R,81,80,74,73,78,Rmed,118,45,44,45,9,India,1
+304,Dishant,Yagnik,L,67,65,63,66,65,Lmed,122,43,45,44,77,India,1
+305,Pravin,Tambe,R,51,49,41,44,47,Rleg,85,80,78,79,02,India,1
+306,Rahul,Tewatia,L,58,56,57,59,57,Rleg,95,49,48,49,20,India,1
+307,Kane,Richardson,R,78,77,76,79,77,Rfast,138,78,81,80,23,Australia,1
+308,Ben,Cutting,R,77,75,74,76,75,Rfast,140,81,83,82,31,Australia,1
+309,Dhawal,Kulkarni,R,54,55,55,51,55,Rmed,125,78,81,80,91,India,1
+310,Vikramjeet,Malik,R,56,58,57,54,57,Rfast,132,62,56,59,0,India,1
+311,Rusty,Theron,R,58,56,56,52,57,Rfast,132,83,82,83,0,South Africa,1
+312,Brainder,Sran,L,58,56,53,52,56,Lmed,129,56,54,55,0,India,1
+313,Mandeep,Singh,R,75,72,77,71,75,Rmed,100,45,44,45,9,India,0
+314,Nic,Maddinson,L,87,78,75,89,80,Roff,84,54,51,53,53,Australia,1
+315,Sarfaraz,Khan,R,83,82,73,90,79,Rmed,108,51,67,59,97,India,0
+316,Vijay,Zol,L,76,82,80,72,79,Loff,89,64,63,64,451,India,1
+317,Subramaniam,Badrinath,R,67,78,85,69,77,Roff,88,55,51,53,0,India,1
+318,Shishir,Bhavane,L,58,52,54,53,55,Roff,93,61,65,63,0,India,1
+319,David,Wiese,R,84,66,68,70,73,Rmed,129,78,76,77,96,South Africa,1
+320,Jalaj,Saxena,R,56,54,54,52,55,Roff,92,51,54,53,0,India,1
+321,Yogesh,Takawale,R,58,54,57,56,56,Rmed,109,48,56,52,5,India,1
+322,Dinesh,Karthik,R,81,82,79,83,81,Rmed,100,20,45,33,19,India,1
+323,Manvinder,Bisla,R,76,77,65,61,73,Rmed,100,45,54,50,36,India,1
+324,Ashok,Dinda,R,32,43,45,46,40,Rfast,138,70,71,71,2,India,1
+325,Yuzvendra,Chahal,R,43,31,48,51,41,Rleg,80,81,75,78,3,India,1
+326,Harshal,Patel,R,36,35,33,31,35,Rfast,130,67,66,67,13,India,1
+327,Iqbal,Abdulla,L,45,43,46,43,45,Lleg,93,69,68,69,21,India,1
+328,Abu,Nechim,R,39,45,43,41,42,Rfast,136,64,67,66,23,India,1
+329,Varun,Aaron,R,43,44,42,41,43,Rfast,146,84,77,81,45,India,1
+330,Sean,Abbott,R,82,74,65,80,74,Rfast,135,70,70,70,77,Australia,1
+331,Sandeep,Warrier,R,67,65,67,65,66,Rfast,137,77,74,76,0,India,1
+332,Adam,Milne,R,45,43,41,77,43,Rfast,149,82,81,82,0,New Zealand,1
+333,Sreenath,Aravind,L,46,48,47,68,47,Lmed,128,66,69,68,0,India,1
+334,KL,Rahul,R,85,82,76,84,81,Rmed,98,45,38,42,14,India,1
+335,Ricky,Bhui,R,34,46,48,67,43,Rleg,94,63,65,64,0,India,1
+336,Hanuma,Vihari,R,80,65,68,85,71,Roff,91,62,58,60,0,India,1
+337,Ashish,Reddy,R,65,64,66,68,65,Roff,99,56,58,57,2,India,1
+338,Moises,Henriques,R,83,85,78,87,82,Rfast,135,76,73,75,5,Australia,1
+339,Parvez,Rasool,R,60,54,57,58,57,Roff,89,68,71,70,21,India,1
+340,Karn,Sharma,L,61,66,64,63,64,Rleg,90,74,71,73,33,India,0
+341,Laxmi Ratan,Shukla,R,68,72,77,79,72,Rmed,115,72,69,71,0,India,1
+342,Padmanabhan,Prasanth,L,57,58,65,63,60,Loff,90,61,59,60,0,India,1
+343,Bipul,Sharma,L,53,54,51,76,53,Loff,88,77,73,75,0,India,1
+344,Naman,Ojha,R,78,82,78,82,79,Rmed,45,44,38,41,7,India,1
+345,Praveen,Kumar,R,80,65,59,88,68,Rmed,126,86,82,84,19,India,0
+346,Chama,Milind,R,54,44,42,40,47,Lmed,128,66,69,68,0,India,1
+347,Siddarth,Kaul,R,45,44,46,49,45,Rmed,129,66,67,67,0,India,1
+348,Fawad,Ahmed ,R,48,52,53,60,51,Rleg,82,78,80,79,1,Australia,1
+349,Nathan,Lyon,R,59,62,63,70,61,Roff,83,83,85,84,2,Australia,1
+350,Shaun,Marsh,L,88,83,77,85,83,Loff,81,61,63,62,3,Australia,0
+351,Peter,Nevill,R,77,82,80,82,80,Rmed,100,30,30,30,4,Australia,1
+352,Chris,Rogers,L,74,85,92,65,84,Rmed,100,50,50,50,5,Australia,1
+353,Peter,Siddle,R,65,70,63,73,68,Rfast,135,85,87,86,6,Australia,1
+354,Adam,Voges,R,85,86,87,84,86,Loff,78,65,73,69,7,Australia,1
+355,Alastair,Cook,L,81,89,94,70,88,Rmed,105,40,40,40,8,England,1
+356,Adam,Lyth,L,83,83,75,78,80,Roff,75,50,50,50,9,England,1
+357,Ben,Stokes,L,92,85,74,91,84,Rfast,140,82,76,79,10,England,1
+358,Mark,Wood,R,70,64,61,72,65,Rfast,145,85,83,84,11,England,1
+359,Adil,Rashid,R,80,75,74,83,76,Rleg,84,79,75,77,12,England,1
