@@ -168,6 +168,13 @@ iframe {
 #transformers:hover {
 	background-image: url('./games/transformers-about.png');
 }
+#allstars{
+	background-image: url('./games/allstars.png');
+	background-size: 100% auto;
+}
+#allstars:hover {
+	background-image: url('./games/allstars-about.png');
+}
 #fast{
 	background-image: url('./games/fast.png');
 	background-size: 100% auto;
@@ -321,6 +328,12 @@ iframe {
   	background: linear-gradient(to bottom, rgba(255,120,0,0.8) 0%, rgba(255,255,255,1) 22%) 0 0;
 }
 
+#game_allstars {
+	background-size: cover;
+	padding-top: 20px;
+	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
+	url(games/allstars.png) fixed 50% 0;
+}
 #game_transformers {
   	background-size: cover;
   	padding-top: 20px;
