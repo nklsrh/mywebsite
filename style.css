@@ -4,7 +4,7 @@ body {
 	font-size: 1.2em;
 	margin: 0;
 	margin-top: 20px;
-	background-image: url('bg.png');
+	background-image: url('bg.jpg');
     text-align: center;
 }
 
@@ -81,106 +81,113 @@ iframe {
 	height: 300px;
 }
 #sc {
-	background-image: url('./games/supercricket.png');
+	background-image: url('./games/supercricket.jpg');
 }
 #sc:hover {
-	background-image: url('./games/supercricket-about.png');
+	background-image: url('./games/supercricket-about.jpg');
 }
 #sc2 {
-	background-image: url('./games/supercricket2.png');
+	background-image: url('./games/supercricket2.jpg');
 }
 #sc2:hover {
-	background-image: url('./games/supercricket2-about.png');
+	background-image: url('./games/supercricket2-about.jpg');
 }
 #blastr {
     width: 314px;
     height: 182px;
-	background-image: url('./games/blastr.png');
+	background-image: url('./games/blastr.jpg');
 	background-size: 100% auto;
 }
 #blastr:hover {
-	background-image: url('./games/blastr-about.png');
+	background-image: url('./games/blastr-about.jpg');
 	background-size: 100% auto;
 }
 #mechfall{
-	background-image: url('./games/0.png');
+	background-image: url('./games/0.jpg');
 }
 #mechfall:hover {
-	background-image: url('./games/mechfall-about.png');
+	background-image: url('./games/mechfall-about.jpg');
 }
 #airracing{
-	background-image: url('./games/airracing.png');
+	background-image: url('./games/airracing.jpg');
 }
 #airracing:hover {
-	background-image: url('./games/airracing-about.png');
+	background-image: url('./games/airracing-about.jpg');
 }
 #cargo{
-	background-image: url('./games/cargo_1920.png');
+	background-image: url('./games/cargo_1920.jpg');
 	background-size: 100% auto;
 }
 #cargo:hover {
-	background-image: url('./games/cargo-about.png');
+	background-image: url('./games/cargo-about.jpg');
 }
 #downforce{
-	background-image: url('./games/downforce.png');
+	background-image: url('./games/downforce.jpg');
 }
 #downforce:hover {
-	background-image: url('./games/downforce-about.png');
+	background-image: url('./games/downforce-about.jpg');
 }
 #bouncy {
-	background-image: url('./games/bouncy.png');
+	background-image: url('./games/bouncy.jpg');
 }
 #bouncy:hover {
-	background-image: url('./games/bouncy-about.png');
+	background-image: url('./games/bouncy-about.jpg');
 }
 #thumbdrift{
-	background-image: url('./games/thumbdrift.png');
+	background-image: url('./games/thumbdrift.jpg');
 	background-size: 100% auto;
 }
 #thumbdrift:hover {
-	background-image: url('./games/thumbdrift-about.png');
+	background-image: url('./games/thumbdrift-about.jpg');
 }
 #ds{
-	background-image: url('./games/ds.png');
+	background-image: url('./games/ds.jpg');
 	background-size: 100% auto;
 }
 #ds:hover {
-	background-image: url('./games/ds-about.png');
+	background-image: url('./games/ds-about.jpg');
 }
 #risk{
-	background-image: url('./games/risk.png');
+	background-image: url('./games/risk.jpg');
 	background-size: 100% auto;
 }
 #risk:hover {
-	background-image: url('./games/risk-about.png');
+	background-image: url('./games/risk-about.jpg');
 }
 #oml{
-	background-image: url('./games/oml.png');
+	background-image: url('./games/oml.jpg');
 	background-size: 100% auto;
 }
 #oml:hover {
-	background-image: url('./games/oml-about.png');
+	background-image: url('./games/oml-about.jpg');
 }
 #transformers{
-	background-image: url('./games/transformers.png');
+	background-image: url('./games/transformers.jpg');
 	background-size: 100% auto;
 }
 #transformers:hover {
-	background-image: url('./games/transformers-about.png');
+	background-image: url('./games/transformers-about.jpg');
+}
+#treasuretails{
+	background-image: url('./games/treasuretails.jpg');
+	background-size: 100% auto;
+}
+#treasuretails:hover {
+	background-image: url('./games/treasuretails-about.jpg');
 }
 #allstars{
-	background-image: url('./games/allstars.png');
+	background-image: url('./games/allstars.jpg');
 	background-size: 100% auto;
 }
 #allstars:hover {
-	background-image: url('./games/allstars-about.png');
+	background-image: url('./games/allstars-about.jpg');
 }
 #fast{
-	background-image: url('./games/fast.png');
+	background-image: url('./games/fast.jpg');
 	background-size: 100% auto;
 }
 #fast:hover {
-	background-image: url('./games/fast-about.png');
+	background-image: url('./games/fast-about.jpg');
 }
 
 .game {
@@ -301,7 +308,7 @@ iframe {
   	padding-top: 220px;
   	padding-bottom: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.9) 70%), 
-  	url(games/ds.png) repeat 0 0;
+  	url(games/ds.jpg) repeat 0 0;
   	background-origin: content-box;
   	color: black;
   	padding-left: 10px;
@@ -319,7 +326,7 @@ iframe {
   	background-size: cover;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.98) 6%), 
-  	url(images/website-smg-work.png) fixed 0 0;
+  	url(images/website-smg-work.jpg) fixed 0 0;
 }
 
 #introspace {
@@ -332,55 +339,61 @@ iframe {
 	background-size: cover;
 	padding-top: 20px;
 	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
-	url(games/allstars.png) fixed 50% 0;
+	url(games/allstars.jpg) fixed 50% 0;
+}
+#game_treasuretails {
+  	background-size: cover;
+  	padding-top: 20px;
+  	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
+  	url(games/treasuretails.jpg) fixed 50% 0;
 }
 #game_transformers {
   	background-size: cover;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
-  	url(games/transformers.png) fixed 50% 0;
+  	url(games/transformers.jpg) fixed 50% 0;
 }
 #game_fast {
   	background-size: cover;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
-  	url(games/fast.png) fixed 50% 0;
+  	url(games/fast.jpg) fixed 50% 0;
 }
 #game_deathsquared {
   	background-size: cover;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
-  	url(games/ds.png) fixed 50% 0;
+  	url(games/ds.jpg) fixed 50% 0;
 }
 #game_thumbdrift {
   	background-size: cover;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
-  	url(games/thumbdrift.png) fixed 50% 0;
+  	url(games/thumbdrift.jpg) fixed 50% 0;
 }
 #game_tdtvos {
   	background-size: cover;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
-  	url(games/thumbdrifttvos.png) fixed 50% 0;
+  	url(games/thumbdrifttvos.jpg) fixed 50% 0;
 }
 #game_onemoreline {
   	background-size: cover;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
-  	url(games/oml.png) fixed 50% 0;
+  	url(games/oml.jpg) fixed 50% 0;
 }
 #game_risk {
   	background-size: cover;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
-  	url(games/risk.png) fixed 50% 0;
+  	url(games/risk.jpg) fixed 50% 0;
 }
 #game_omd {
   	background-size: repeat;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
-  	url(games/omd.png) fixed 50% 0;
+  	url(games/omd.jpg) fixed 50% 0;
 }
 .smgsection .sectioncard {
     width: 314px;
@@ -408,37 +421,37 @@ iframe {
   	background-size: repeat;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.95) 80%), 
-  	url(games/blastr.png) repeat 50% 0;
+  	url(games/blastr.jpg) repeat 50% 0;
 }
 #game_sc2 {
   	background-size: repeat;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
-  	url(games/supercricket2.png) repeat 50% 0;
+  	url(games/supercricket2.jpg) repeat 50% 0;
 }
 #game_airracing {
   	background-size: repeat;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
-  	url(games/airracing.png) repeat 50% 0;
+  	url(games/airracing.jpg) repeat 50% 0;
 }
 #game_cargo {
   	background-size: repeat;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
-  	url(games/cargo.png) repeat 50% 0;
+  	url(games/cargo.jpg) repeat 50% 0;
 }
 #game_downforce {
   	background-size: repeat;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
-  	url(games/downforce.png) repeat 50% 0;
+  	url(games/downforce.jpg) repeat 50% 0;
 }
 #game_bouncy {
   	background-size: repeat;
   	padding-top: 20px;
   	background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,1) 80%), 
-  	url(games/bouncy.png) repeat 50% 0;
+  	url(games/bouncy.jpg) repeat 50% 0;
 }
 
 
@@ -464,7 +477,7 @@ iframe {
 	bottom: -10px;
 	padding: 0px;
    	width:100%;
-	background-image: url('bg.png');
+	background-image: url('bg.jpg');
 }
 #footer img {
 	height: 1.0em;
