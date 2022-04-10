@@ -7,11 +7,11 @@ supsonis,59b514ed
 admo,ca-app-pub-7101118121923179/3504659743
 fybe,42309
 fmo,905271
-adovrmodulo,999
-mbaig,999
-ibfa,100
+adovrmodulo,3
+mbaig,1
+ibfa,1
 cdl,5
-afm,3
+afm,1
 crosspromomod,3
 crosspromooff,1
 wt20hsthre,30
