@@ -7,7 +7,7 @@ supsonis,59b514ed
 admo,ca-app-pub-7101118121923179/3504659743
 fybe,42309
 fmo,905271
-adovrmodulo,3
+adovrmodulo,12
 mbaig,1
 ibfa,1
 cdl,5
