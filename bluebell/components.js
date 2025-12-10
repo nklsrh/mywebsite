@@ -4,9 +4,7 @@ const navLinks = [
   { href: "flooring.html", label: "Flooring" },
   { href: "bathrooms.html", label: "Bathrooms" },
   { href: "kitchen-utility.html", label: "Kitchen & Utility" },
-  { href: "appliances.html", label: "Appliances" },
   { href: "cleaning-repair.html", label: "Cleaning & Repair" },
-  { href: "interior-details.html", label: "Interior Details" },
   { href: "stretch-goals.html", label: "Stretch Goals" }
 ];
 
