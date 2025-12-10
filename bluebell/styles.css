@@ -1,3 +1,139 @@
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2em;
+  align-items: start;
+  margin-bottom: 2em;
+}
+.section-grid .section-body {
+  grid-column: 1;
+}
+.section-grid .photo-block {
+  display: contents;
+}
+.section-grid .photo-column {
+  grid-column: span 1;
+}
+.section-grid .photo-column h3 {
+  margin-top: 0;
+}
+.section-grid .photo-placeholder {
+  margin: 0.5em 0;
+}
+
+@media (max-width: 900px) {
+  .section-grid {
+    display: block !important;
+    max-width: 100vw;
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+    overflow-x: hidden;
+  }
+  .section-grid .section-body,
+  .section-grid .photo-column {
+    grid-column: auto;
+    margin-bottom: 1.2em;
+  }
+}
+.photo-block img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  max-height: 300px;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border-radius: 0.5em;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+  background: #f8f8f8;
+}
+.vision-thumbnails {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 0.5em;
+  flex-wrap: wrap;
+}
+.splash-header {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  min-height: 240px;
+  max-height: 320px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.splash-header .header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.78) saturate(1.1) blur(0.5px);
+}
+.splash-header .container {
+  position: relative;
+  z-index: 2;
+  background: none;
+  border-radius: 0;
+  padding: 1.2em 1em;
+  margin: 1.2em auto;
+  box-shadow: none;
+  text-align: center;
+}
+.splash-header .site-title,
+.splash-header .tagline,
+.splash-header .highlight {
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.22), 0 1px 2px rgba(0,0,0,0.18);
+}
+}
+
+.splash-image {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 38vh;
+  min-height: 220px;
+  max-height: 420px;
+  overflow: hidden;
+  z-index: 0;
+}
+.splash-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.82) saturate(1.1) blur(0.5px);
+}
+.splash-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.7) 100%);
+  z-index: 1;
+}
+.container, .thumbnail-grid {
+  position: relative;
+  z-index: 2;
+}
 @media (max-width: 600px) {
   header .site-title {
     font-size: 1.1rem;
