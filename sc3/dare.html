@@ -1,25 +1,158 @@
-<script>
-  window.onload = function() {
-      // 1. Extract the payload from the web URL
-      const urlParams = new URLSearchParams(window.location.search);
-      const payload = urlParams.get('p');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      // 2. Attempt to force-open the native app using the custom URI scheme
-      const customUri = "sc3://dare?p=" + payload;
-      window.location.href = customUri;
+    <!-- Open Graph Tags for WhatsApp / iMessage Unfurling -->
+    <meta property="og:title" content="You've been challenged in Super Cricket 3!" />
+    <meta property="og:description" content="Click here to play the dare or download the game to accept the challenge!" />
+    <!-- TODO: Replace with an actual high-quality horizontal screenshot hosted on your server -->
+    <meta property="og:image" content="https://nklsrh.com/sc3/assets/dare_preview.jpg" />
+    <meta property="og:url" content="https://nklsrh.com/sc3/dare.html" />
 
-      // 3. Set a timeout. If the app didn't open (because it's not installed), 
-      // the browser remains active, and we redirect to the App Store / Play Store.
-      setTimeout(function() {
-          // If Android:
-          if (/android/i.test(navigator.userAgent)) {
-              // Optionally use Google Play referrer tracking to pass the payload through install
-              window.location.href = "https://play.google.com/store/apps/details?id=com.nklsrh.supercricket3&referrer=" + payload;
-          } 
-          // If iOS:
-          else if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-              window.location.href = "https://apps.apple.com/app/idYOUR_APP_ID";
-          }
-      }, 1500); 
-  };
-</script>
+    <title>Opening Super Cricket 3...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0b0f19;
+            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            padding: 24px;
+            max-width: 400px;
+        }
+
+        .icon {
+            width: 96px;
+            height: 96px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-radius: 20px;
+            margin: 0 auto 24px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            box-shadow: 0 8px 32px rgba(16, 185, 129, 0.4);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0 0 12px 0;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 16px;
+            color: #9ca3af;
+            margin: 0 0 32px 0;
+            line-height: 1.5;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #10b981;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s, background-color 0.2s;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .button:active {
+            transform: scale(0.96);
+            background-color: #059669;
+        }
+
+        .spinner {
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            margin: 0 auto 24px auto;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon">🏏</div>
+        <h1>Opening Match...</h1>
+        <div class="spinner"></div>
+        <p>You are being redirected to Super Cricket 3 to play this Dare.</p>
+        
+        <!-- Fallback button if Javascript redirect gets blocked -->
+        <button class="button" onclick="manualRedirect()">Click here if nothing happens</button>
+    </div>
+
+    <script>
+        // Extract the payload 'p' parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const payload = urlParams.get('p');
+
+        // Store target URLs
+        const customUri = payload ? "sc3://dare?p=" + payload : "sc3://";
+        let storeUrl = "https://nklsrh.com/sc3"; // Default fallback
+
+        // Determine destination based on OS
+        const isAndroid = /android/i.test(navigator.userAgent);
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+        if (isAndroid) {
+            storeUrl = payload ? 
+                "https://play.google.com/store/apps/details?id=com.nklsrh.supercricket3&referrer=" + payload :
+                "https://play.google.com/store/apps/details?id=com.nklsrh.supercricket3";
+        } else if (isIOS) {
+            // Replace with your actual Apple App Store ID when published
+            storeUrl = "https://apps.apple.com/app/idYOUR_APP_ID";
+        }
+
+        // Automatic redirect logic on load
+        window.onload = function() {
+            // Attempt to open the installed app via custom URI scheme
+            window.location.href = customUri;
+
+            // If the app doesn't grab the intent (not installed), the browser stays active.
+            // Wait 1.5 seconds, then send them to the appropriate App Store to download it.
+            setTimeout(function() {
+                // If they are still staring at this page...
+                if (document.visibilityState === 'visible') {
+                    window.location.href = storeUrl;
+                }
+            }, 1500); 
+        };
+
+        // Manual backup button if auto-redirect is blocked by a strict browser (like Safari)
+        function manualRedirect() {
+            window.location.href = customUri;
+            
+            setTimeout(function() {
+                if (document.visibilityState === 'visible') {
+                    window.location.href = storeUrl;
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
