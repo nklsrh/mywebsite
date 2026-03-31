@@ -1,0 +1,25 @@
+<script>
+  window.onload = function() {
+      // 1. Extract the payload from the web URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const payload = urlParams.get('p');
+
+      // 2. Attempt to force-open the native app using the custom URI scheme
+      const customUri = "sc3://dare?p=" + payload;
+      window.location.href = customUri;
+
+      // 3. Set a timeout. If the app didn't open (because it's not installed), 
+      // the browser remains active, and we redirect to the App Store / Play Store.
+      setTimeout(function() {
+          // If Android:
+          if (/android/i.test(navigator.userAgent)) {
+              // Optionally use Google Play referrer tracking to pass the payload through install
+              window.location.href = "https://play.google.com/store/apps/details?id=com.nklsrh.supercricket3&referrer=" + payload;
+          } 
+          // If iOS:
+          else if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+              window.location.href = "https://apps.apple.com/app/idYOUR_APP_ID";
+          }
+      }, 1500); 
+  };
+</script>
