@@ -7,7 +7,7 @@
 <meta name="description" content="Product leader with a game dev heritage. Beatstar, NextBeat (acquired by Duolingo), Super Cricket. I build software that makes you smile.">
 <meta property="og:title" content="Nikhil Suresh – Gamification & Product Leader">
 <meta property="og:description" content="A PM who codes, a designer who ships, and a strategist obsessed with the micro-moments that make software feel alive.">
-<meta property="og:image" content="https://www.nikhilsuresh.com/images/me.jpg">
+<meta property="og:image" content="https://www.nikhilsuresh.com/screenies/beatstar.gif">
 <link rel="icon" href="ico.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,14 +55,19 @@
   nav ul a:hover { color: var(--ink); }
 
   /* hero */
-  .hero { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; padding: 56px 0 72px; }
+  .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 32px 0 56px; }
   .eyebrow { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 16px; }
-  .hero h1 { font-size: clamp(40px, 7vw, 76px); font-weight: 800; letter-spacing: -0.03em; }
+  .hero h1 { font-size: clamp(38px, 5.6vw, 64px); font-weight: 800; letter-spacing: -0.03em; }
   .hero h1 em { font-style: normal; color: var(--accent); display: inline-block; transition: transform .3s cubic-bezier(.3,1.8,.5,1); }
   .hero h1 em:hover { transform: rotate(-4deg) scale(1.06); }
-  .hero p { font-size: 20px; color: var(--muted); max-width: 560px; margin: 24px 0 32px; }
-  .hero img { width: 220px; height: 220px; border-radius: 32px; object-fit: cover; transform: rotate(3deg); box-shadow: 0 20px 40px -20px rgba(0,0,0,.35); transition: transform .4s cubic-bezier(.3,1.8,.5,1); }
-  .hero img:hover { transform: rotate(-3deg) scale(1.04); }
+  .hero p { font-size: 19px; color: var(--muted); max-width: 520px; margin: 20px 0 28px; }
+  .mosaic { display: grid; grid-template-columns: 1.15fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; height: 460px; }
+  .mosaic a { position: relative; border-radius: 20px; overflow: hidden; background: var(--chip); text-decoration: none; transition: transform .3s cubic-bezier(.3,1.8,.5,1); }
+  .mosaic a:first-child { grid-row: span 2; }
+  .mosaic a:hover { transform: rotate(-1.5deg) scale(1.02); }
+  .mosaic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .mosaic span { position: absolute; left: 0; right: 0; bottom: 0; padding: 32px 14px 12px; color: #fff; font-size: 14px; line-height: 1.3; background: linear-gradient(transparent, rgba(0,0,0,.8)); }
+  .mosaic b { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: 18px; }
   .btns { display: flex; gap: 12px; flex-wrap: wrap; }
   .btn { display: inline-block; padding: 14px 22px; border-radius: 14px; font-weight: 600; text-decoration: none; border: 2px solid var(--ink); transition: transform .15s, box-shadow .15s; }
   .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); box-shadow: 0 4px 0 #c43a1c; }
@@ -132,8 +137,8 @@
 
   @media (max-width: 760px) {
     nav ul { display: none; }
-    .hero { grid-template-columns: 1fr; padding-top: 24px; gap: 32px; }
-    .hero img { width: 140px; height: 140px; order: -1; }
+    .hero { grid-template-columns: 1fr; padding-top: 8px; gap: 28px; }
+    .mosaic { height: 340px; }
     .stats { grid-template-columns: repeat(2, 1fr); }
     .work, .how { grid-template-columns: 1fr; }
     .card.wide { grid-column: auto; flex-direction: column; }
@@ -170,7 +175,11 @@
         <a class="btn" href="https://www.linkedin.com/in/nklsrh/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
-    <img src="images/me.jpg" alt="Nikhil Suresh">
+    <div class="mosaic">
+      <a href="#work"><img src="screenies/beatstar.gif" alt="Beatstar gameplay"><span><b>Beatstar</b>$100M+ music game</span></a>
+      <a href="#work"><img src="screenies/sc3.gif" alt="Super Cricket 3 gameplay"><span><b>Super Cricket 3</b>Solo-made, 2M+ players</span></a>
+      <a href="#work"><img src="screenies/countrystar.gif" alt="Country Star gameplay"><span><b>Country Star</b>$10M+ launch</span></a>
+    </div>
   </header>
 
   <div class="stats">
