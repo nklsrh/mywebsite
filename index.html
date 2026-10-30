@@ -1,268 +1,316 @@
-﻿<!doctype html>
-<html>
-	<head profile="http://www.w3.org/2005/10/profile">
-		<link rel="shortcut icon" href="ico.ico" />
-		<title>Nikhil Suresh - Game Developer, Designer</title>
-		<link rel='stylesheet' href='style.css'/>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nikhil Suresh – Gamification & Product Leader</title>
+<meta name="description" content="Product leader with a game dev heritage. Beatstar, NextBeat (acquired by Duolingo), Super Cricket. I build software that makes you smile.">
+<meta property="og:title" content="Nikhil Suresh – Gamification & Product Leader">
+<meta property="og:description" content="A PM who codes, a designer who ships, and a strategist obsessed with the micro-moments that make software feel alive.">
+<meta property="og:image" content="https://www.nikhilsuresh.com/images/me.jpg">
+<link rel="icon" href="ico.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbf7f0;
+    --card: #ffffff;
+    --ink: #1c1a17;
+    --muted: #6b655c;
+    --line: #e9e2d6;
+    --accent: #ff5a36;
+    --accent-ink: #ffffff;
+    --chip: #f3ede3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141311;
+      --card: #1d1b18;
+      --ink: #f4efe7;
+      --muted: #a39b8f;
+      --line: #2e2b26;
+      --chip: #26231f;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  h1, h2, h3 { font-family: "Bricolage Grotesque", Inter, sans-serif; line-height: 1.1; margin: 0; }
 
-		  ga('create', 'UA-29867202-1', 'auto');
-		  ga('send', 'pageview');
+  /* nav */
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; }
+  .logo { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 22px; text-decoration: none; letter-spacing: -0.02em; }
+  .logo span { color: var(--accent); }
+  nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; font-size: 15px; }
+  nav ul a { text-decoration: none; color: var(--muted); }
+  nav ul a:hover { color: var(--ink); }
 
-		</script>
-		<link href='http://fonts.googleapis.com/css?family=Aldrich|Metrophobic|Roboto:400,700|News+Cycle:400,700' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-        <img src='images/studiologo-full.png' width='400' style='text-align: center' alt="Nikhil Suresh"/>
-<!-- 		<div id='top' onmouseover='switchToNikhil();' onmouseout='switchToNKL()'>
-				<a href='http://twitter.com/nklsrh/' target='_blank'><img src='twt.png'/></a>
-			<span id='name'>
-				NKL
-			</span>
-		</div> -->
-		<!--div id='blackBar'><br></div-->
-		<br>Game Developer, Designer
-		<div id="header">
-			<a href='http://twitter.com/nklsrh/' alt='Twitter' target='_blank'><img class='icons2' alt='Twitter' src='twt.png'/></a>
-			<a href='http://youtube.com/nikmuk' alt='YouTube'  target='_blank'><img class='icons2' alt='YouTube'  src='youtube.png'/></a>
-			<a href='http://blog.nikhilsuresh.com' alt='Blog' target='_blank'><img class='icons2' style='height: 50px' alt='Blog' src='blog.png'/></a>	
-			<a href='mailto:nikhil@nklsrh.com' alt='Email' target='_blank'><img class='icons2' alt='Email' src='email.png'/></a>	
-			<a href='http://www.linkedin.com/in/nikhil-suresh-93838b134/' alt='LinkedIn' target='_blank'><img class='icons2' alt='Blog' src='linkedin.png'/></a>	
-		</div>
-		
-		<div id="linkout"><a href="./NikhilSuresh_Resume.pdf">Download Resume/CV</a></div>
-		<br>
+  /* hero */
+  .hero { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; padding: 56px 0 72px; }
+  .eyebrow { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 16px; }
+  .hero h1 { font-size: clamp(40px, 7vw, 76px); font-weight: 800; letter-spacing: -0.03em; }
+  .hero h1 em { font-style: normal; color: var(--accent); display: inline-block; transition: transform .3s cubic-bezier(.3,1.8,.5,1); }
+  .hero h1 em:hover { transform: rotate(-4deg) scale(1.06); }
+  .hero p { font-size: 20px; color: var(--muted); max-width: 560px; margin: 24px 0 32px; }
+  .hero img { width: 220px; height: 220px; border-radius: 32px; object-fit: cover; transform: rotate(3deg); box-shadow: 0 20px 40px -20px rgba(0,0,0,.35); transition: transform .4s cubic-bezier(.3,1.8,.5,1); }
+  .hero img:hover { transform: rotate(-3deg) scale(1.04); }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 14px 22px; border-radius: 14px; font-weight: 600; text-decoration: none; border: 2px solid var(--ink); transition: transform .15s, box-shadow .15s; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); box-shadow: 0 4px 0 #c43a1c; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn.primary:active { transform: translateY(3px); box-shadow: 0 1px 0 #c43a1c; }
 
-		<div id='games' class='game'>
-			<a href='./work.html#game_allstars' class='icon'   id='allstars'/></a>
-			<a href='./work.html#game_treasuretails' class='icon'   id='treasuretails'/></a>
-			<a href='./work.html#game_transformers' class='icon'   id='transformers'/></a>
-			<a href='./work.html#game_fast' class='icon'   id='fast'/></a>
-			<a href='./work.html#game_ds' class='icon'   id='ds'/></a>
-			<a href='./work.html#game_thumbdrift' class='icon'   id='thumbdrift'/></a>
-			<a href='./work.html#game_risk' class='icon'   id='risk'/></a>
-			<a href='./work.html#game_onemoreline' class='icon'   id='oml'/></a>
-			<a href='./work.html#game_sc2' class='icon' id='sc2'/></a>
-			<a href='./work.html#game_blastr' class='icon'  id='blastr'/></a>
-			<br>
-		<!--	<a href='./airracing.html' class='icon'   id='airracing'/></a>
-			<a href='./downforce.html' class='icon'   id='downforce'/></a>	
-			<a href='./cargo.html' class='icon'   id='cargo'/></a>
-			<a href='./supercricket/index.html' class='icon'   id='sc'/></a>
-			<a href='./bouncy.html' class='icon'   id='bouncy'/></a> -->
-		</div>
+  /* stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; margin-bottom: 96px; }
+  .stat { background: var(--card); padding: 24px; }
+  .stat b { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: 36px; font-weight: 800; letter-spacing: -0.02em; }
+  .stat span { font-size: 14px; color: var(--muted); }
 
-		<br>
-		<div id="linkout"><a href="./work.html">See all games...</a></div>
-		<br>
+  section { margin-bottom: 96px; }
+  .section-head { margin-bottom: 32px; }
+  .section-head h2 { font-size: clamp(30px, 4.5vw, 44px); font-weight: 800; letter-spacing: -0.02em; }
+  .section-head p { color: var(--muted); margin: 10px 0 0; max-width: 600px; }
 
-		<div id='resume'>	
+  /* work cards */
+  .work { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; transition: transform .25s, box-shadow .25s; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -24px rgba(0,0,0,.3); }
+  .card.wide { grid-column: span 2; flex-direction: row; }
+  .card .media { aspect-ratio: 16/10; background: var(--chip); overflow: hidden; }
+  .card.wide .media { aspect-ratio: auto; flex: 1; max-height: 420px; }
+  .card.wide .body { align-self: center; }
+  .card .media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card .body { padding: 24px 26px 28px; flex: 1; }
+  .card .meta { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: 8px; }
+  .card h3 { font-size: 26px; font-weight: 800; margin-bottom: 10px; }
+  .card p { color: var(--muted); margin: 0 0 16px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { background: var(--chip); font-size: 13px; padding: 4px 10px; border-radius: 99px; color: var(--muted); }
+  .links { margin-top: 16px; display: flex; gap: 16px; font-weight: 600; font-size: 15px; }
+  .links a { text-decoration: none; border-bottom: 2px solid var(--accent); }
 
-			<!--<img src='images/nikhil.png' width='155' height='200'/>	-->
+  /* timeline */
+  .timeline { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .timeline li { display: grid; grid-template-columns: 140px 1fr; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+  .timeline .when { color: var(--muted); font-size: 15px; font-variant-numeric: tabular-nums; }
+  .timeline h3 { font-size: 20px; font-weight: 800; }
+  .timeline h3 small { font-family: Inter, sans-serif; font-weight: 500; font-size: 15px; color: var(--muted); }
+  .timeline p { margin: 6px 0 0; color: var(--muted); }
 
-			<h2>Resume/CV <strong ><a href="./NikhilSuresh_Resume.pdf">(PDF)</a></strong></h2>
-			<p style="font-weight: 40%">
-			Senior Software Engineer with experience in C#, C++, Javascript
-			<br>
-			All-rounder with knowledge of 2D/3D rendering pipeline, physics, UI, and version control
-			<br>
-			Game projects published across mobile, consoles, and PC since 2011
-			<br>
-			Bachelor of Software Engineering, UNSW Australia
-			</p>
-			<br>
+  /* games grid */
+  .games { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .game { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 1; background: var(--chip); }
+  .game img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+  .game:hover img { transform: scale(1.08); }
+  .game span { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 12px 10px; font-size: 14px; font-weight: 600; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.75)); }
 
-			<div id="smg" class="sectional">
-			<img class="studiologo" src="./images/spaceape.png"/>
-				<h3>Senior Software Engineer at <a href="http://www.spaceapegames.com"><strong>Space Ape Games</strong></a> (2018-present)</h3>
-				Client-side developer working on gameplay features for live game titles on Android and iOS, as well as prototype work on unannounced games.
-				<ul>
-					<li>
-					<strong>Treasure Tails</strong>
-					<i class="pl">(iOS/Android)</i>
-					</li>
-					<li>
-					<strong>Transformers: Earth Wars</strong>
-					<i class="pl">(iOS/Android)</i>
-					</li>
-					<li>
-					<strong>Prototyping projects: Sports, RPG, Shooter</strong>
-					<i class="pl">(iOS/Android)</i>
-					</li>
-				</ul>
-				<strong id="linkout"><a href="./work.html#spaceapestuff">More details...</a></strong>
-			</div>
-			
+  /* how I work */
+  .how { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .how div { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 26px; }
+  .how .icon { font-size: 28px; margin-bottom: 12px; }
+  .how h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+  .how p { margin: 0; color: var(--muted); font-size: 16px; }
 
-			<div id="spg" class="sectional">
-				<img class="studiologo" src="./images/mylogo.png"/>
-					<h3>Self-Published Games (2011-present)</h3>
-						Produced code, art, and design on these projects in my spare time
-					<ul>					
-						<li>
-						<strong>Super Cricket: All Stars</strong>
-						<i class="pl">(Android)</i>
-						</li>
-						<li>
-						<strong>SUPER CRICKET 2</strong>
-						<i class="pl">(iOS/Android)</i>
-						</li>
-						<li>
-						<strong>BLASTR</strong>
-						<i class="pl">(PC)</i>
-						</li>
-						<li>
-						<strong>Air Racing</strong>
-						<i class="pl">(Android)</i>
-						</li>
-						<li>
-						<strong>CARGO: Locked and Loaded</strong>
-						<i class="pl">(Android/Apple TV)</i>
-						</li>
-						<li>
-						<strong>DownForce</strong>
-						<i class="pl">(Android/Windows Store)</i>
-						</li>
-					</ul>
-					<strong id="linkout"><a href="./work.html#homestuff">More details...</a></strong>
-				</div>
-			
-			<div id="smg" class="sectional">
-			<img class="studiologo" src="./images/smgstudio.png"/>
-				<h3>Game Developer at <a href="http://smgstudios.com"><strong>SMG Studio</strong></a> (2015-2018)</h3>
-				Designing and programming gameplay features in C# (Unity).
-				<br>
-				All-rounder programmer working across gameplay, UI, physics, plugins, version control, and intra-team communications.
-				<ul>
-					<li>
-					<strong>Fast and Furious: Takedown</strong>
-					<i class="pl">(iOS/Android)</i>
-					</li>
-					<li>
-					<strong>Death Squared</strong>
-					<i class="pl">(PlayStation 4, Xbox One, Steam)</i>
-					</li>
-					<li>
-					<strong>Hasbro® Risk: Global Domination</strong>
-					<i class="pl">(iOS/Android/Apple TV)</i>
-					</li>
-					<li>
-					<strong>Thumb Drift</strong>
-					<i class="pl">(iOS/Android/Apple TV)</i>
-					</li>
-					<li>
-					<strong>One More Dash</strong>
-					<i class="pl">(iOS/Android/Windows Store)</i>
-					</li>
-					<li>
-					<strong>One More Line</strong>
-					<i class="pl">(iOS/Android/Steam)</i>
-					</li>
-				</ul>
-				<strong id="linkout"><a href="./work.html#smgstuff">More details...</a></strong>
-			</div>
+  /* contact */
+  .contact { background: var(--ink); color: var(--bg); border-radius: 32px; padding: 56px; text-align: center; }
+  .contact h2 { font-size: clamp(32px, 5vw, 52px); font-weight: 800; letter-spacing: -0.02em; }
+  .contact p { opacity: .7; max-width: 520px; margin: 16px auto 28px; }
+  .contact .btns { justify-content: center; }
+  .contact .btn:not(.primary) { border-color: var(--bg); color: var(--bg); }
 
-			<div id="blfs" class="sectional2">
-			<img class="studiologo" src="./images/blowfish.png"/>
-				<h3>Gameplay Programmer Intern at <a href="http://www.blowfishstudios.com/"><strong>Blowfish Studios</strong></a> (2014)</h3>
-				Programmed and shipped gameplay features on key titles, both client projects and in-house games.
-				<ul>
-					<li>
-					<strong>Gunscape</strong>
-					<i class="pl">(Steam, Xbox One, Windows Store)</i>
-					</li>
-					<li>
-					<strong>Scholastic® TombQuest</strong>
-					<i class="pl">(Web)</i>
-					</li>
-					<li>
-					<strong>DeNa® Legend Borne</strong>
-					<i class="pl">(iOS/Android)</i>
-					</li>
-				</ul>
-			</div>
+  footer { padding: 40px 0 56px; color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  footer a { color: var(--muted); }
 
-				<!--<ul>					
-					<li>SUPER CRICKET 2 (<a href="https://itunes.apple.com/us/app/super-cricket-2/id1177674985?ls=1&mt=8">iPhone</a>, <a href="https://play.google.com/store/apps/details?id=com.nklsrh.supercrickethd">Android</a>)</li>
-					<li>Air Racing (Windows Store, Windows Phone, <a href="https://play.google.com/store/apps/details?id=com.nklsrh.airracing">Android</a>)</li>
-					<li>CARGO: Locked and Loaded (Windows Store) </li>
-					<li>DownForce (Windows Store, Windows Phone, <a href="https://play.google.com/store/apps/details?id=com.nklsrh.superracing">Android</a>)</li>
-					<li>SUPER CRICKET (<a href="https://play.google.com/store/apps/details?id=com.nklsrh.supercricketfree">Android</a>, <a href="http://appworld.blackberry.com/webstore/content/23333873">BlackBerry</a>)</li>
-				</ul>-->
-				
-			<!--<br>
-			<h3>Other Work Experience</h3>
-				<h4>Interned at <strong>Blowfish Studios</strong></h4>
-				<ul>
-					<li><a href="http://www.playgunscape.com/"><i>Gunscape</i></a> (Steam, XBOX ONE)</li>
-					<li>Scholastic's <i><a href="http://tombquest.scholastic.com/">TombQuest</a></i> game (Web)</li>
-					<li><i>DeNA's <a href="http://forums.toucharcade.com/showthread.php?t=281506&page=3">Legend Borne</a></i> mobile game (iOS, Android)</li>
-				</ul>-->
+  @media (max-width: 760px) {
+    nav ul { display: none; }
+    .hero { grid-template-columns: 1fr; padding-top: 24px; gap: 32px; }
+    .hero img { width: 140px; height: 140px; order: -1; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .work, .how { grid-template-columns: 1fr; }
+    .card.wide { grid-column: auto; flex-direction: column; }
+    .card.wide .media { min-height: 0; aspect-ratio: 16/10; }
+    .games { grid-template-columns: repeat(2, 1fr); }
+    .timeline li { grid-template-columns: 1fr; gap: 4px; }
+    .contact { padding: 40px 24px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
 
-			<div id="allgames" class="wall"><strong><a href="./work.html">See all games...</a></strong></div>
-			
+  <nav>
+    <a class="logo" href="/">nikhil<span>.</span></a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#games">Games</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-			<div class="sectional2">
-				<h3>Skills and Education</h3>
-				<ul>
-					<li>Bachelor of Software Engineering, University of New South Wales (graduated 2015)</li>
-					<li>Programming: Skills in C# and C++ (shipped products using Unity, XNA, OpenFrameworks and Visual Studio .NET)</li>
-					<li><i>Dentsu Aegis Network®</i> Emerging Leadership Group (2016-2017)</li>
-					<li>Git: Highly-skilled in version-control using SourceTree and SmartGit</li>
-					<li>Art: Proficient in Photoshop, Blender, Inkscape</li>
-					<li>Web: Proficient in HTML, CSS and JavaScript - produced contract work using web technologies</li>
-				</ul>
-			</div>
+  <header class="hero">
+    <div>
+      <div class="eyebrow">Gamification &amp; Product Leader</div>
+      <h1>I build software that makes you <em>smile.</em></h1>
+      <p>With a background in videogames, I'm a PM who codes, a designer who ships, and a strategist obsessed with the micro-moments that make software feel alive.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:nklsrh@gmail.com">Get in touch</a>
+        <a class="btn" href="https://www.linkedin.com/in/nklsrh/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <img src="images/me.jpg" alt="Nikhil Suresh">
+  </header>
 
+  <div class="stats">
+    <div class="stat"><b>$100M+</b><span>Beatstar lifetime revenue</span></div>
+    <div class="stat"><b>2M+</b><span>Super Cricket players</span></div>
+    <div class="stat"><b>1 exit</b><span>NextBeat → Duolingo</span></div>
+    <div class="stat"><b>15 yrs</b><span>shipping games &amp; apps</span></div>
+  </div>
 
-			<div class="sectional2">
-				<h3>Achievements and Awards</h3>
-				<ul>
-					<li>Nokia/Microsoft LVLUP: Road to PAX winner - 2014 (BLASTR, MECHFALL). <br> <a href="http://blog.nikhilsuresh.com/post/103161292746/my-pax-australia-experience-21-days-to-paxaus">Showcased BLASTR at PAX (Penny Arcade Expo) Australia 2014</a> in a Microsoft-sponsored booth after winning the LVLUP competition</a></li>
-					<li>Microsoft Appreneur winner - 2013 (DownForce, Air Racing)</a></li>
-					<li>Mozilla Developer Derby (<a href="https://hacks.mozilla.org/2012/01/congratulations-november-dev-derby-winners/">Winner 2011 - Bouncy and the Apple</a>) </li>
-					<li>iFEST Independent Games Festival - <a href="http://www.ifest.us/?p=544">2011 Winner for Best Game</a> ('blastr')</li>
-					<li>Microsoft Certified Professional - Microsoft Certified Application Developer (.NET) - 2008</li>
-				</ul>
-			</div>
+  <section id="work">
+    <div class="section-head">
+      <h2>Selected work</h2>
+      <p>Games taught me how to make people feel something. Product taught me how to make it matter.</p>
+    </div>
+    <div class="work">
 
+      <article class="card wide">
+        <div class="media"><img src="screenies/beatstar.gif" alt="Beatstar gameplay" loading="lazy"></div>
+        <div class="body">
+          <div class="meta">Duolingo · NextBeat · 2024 – now</div>
+          <h3>Gamifying music learning</h3>
+          <p>Founding product lead at NextBeat, a music gamification startup acquired by Duolingo. Now a Senior PM at Duolingo, leading a team that brings retention psychology, habit formation and emotional game design to a next-gen music course launching in 2026.</p>
+          <div class="tags"><span class="tag">0 → 1</span><span class="tag">Acquisition</span><span class="tag">Habit formation</span><span class="tag">Team lead</span></div>
+        </div>
+      </article>
 
-			<div class="sectional2">
-				<h3>Milestones</h3>
-				<ul>
-					<li>2+ million downloads for SUPER CRICKET 2 across iOS and Android (Feb 2015 - June 2017)</li>
-					<li><a href='http://www.blastrgame.com/img/GameInformer_ArticleScan_iFEST.png' target='_blank'>Featured in GameInformer magazine (February 2012)</a> in an interview about students winning the Sydney iFEST independent games competition</li>
-					<li>Showcased <a href="http://www.BLASTRgame.com">BLASTR</a> at the Microsoft DX booth at PAX Australia 2014</li>
-					<li>Wrote <a href="http://buildnewgames.com/webgl-threejs/">tutorial articles</a> on 2D/3D game development with HTML5 using WebGL and Canvas</li>
-					<li><a href="https://www.youtube.com/watch?v=WG_-5WgaS08">AXR.1 Racing Simulator</a> (10th in state for HSC Multimedia, overall winner of Uni. Wollongong High Schools Technology award) </li>
-				</ul>
-			</div>
-			
-				<strong id="linkout"><a href="./NikhilSuresh_Resume.pdf">Download resume/CV (PDF)</a></strong>
-		</div>
+      <article class="card">
+        <div class="media"><img src="screenies/countrystar.gif" alt="Country Star gameplay" loading="lazy"></div>
+        <div class="body">
+          <div class="meta">Space Ape Games · 2021 – 2024</div>
+          <h3>Beatstar &amp; Country Star</h3>
+          <p>Product lead on Beatstar, a top mobile music game with $100M+ lifetime revenue. Launched Country Star, which grossed $10M+. Ran experiments, shipped features, and wrangled labels, publishers and data.</p>
+          <div class="tags"><span class="tag">Live ops</span><span class="tag">Experimentation</span><span class="tag">Monetisation</span></div>
+        </div>
+      </article>
 
-		<br>
+      <article class="card">
+        <div class="media"><img src="screenies/sc3.gif" alt="Super Cricket 3 gameplay" loading="lazy"></div>
+        <div class="body">
+          <div class="meta">Founder · 2015 – now</div>
+          <h3>Super Cricket</h3>
+          <p>My solo-developed cricket franchise: design, code, art and live ops. Played by over 2 million cricket fans. Super Cricket 2 has been live since 2015 and peaked at 30K DAU. Super Cricket 3 is the newest chapter.</p>
+          <div class="tags"><span class="tag">Solo dev</span><span class="tag">F2P</span><span class="tag">Global audience</span></div>
+          <div class="links"><a href="https://play.google.com/store/apps/details?id=com.nklsrh.supercricket3" target="_blank" rel="noopener">Super Cricket 3 ↗</a></div>
+        </div>
+      </article>
 
-		<footer>
-			<div id="footer">
-				<a href='http://twitter.com/nklsrh/' alt='Twitter' target='_blank'><img class='icons' alt='Twitter' src='twt.png'/></a>
-				<a href='http://youtube.com/nikmuk' alt='YouTube'  target='_blank'><img class='icons' alt='YouTube'  src='youtube.png'/></a>
-				<a href='http://blog.nikhilsuresh.com' alt='Blog' target='_blank'><img class='icons' alt='Blog' src='blog.png'/></a>	
-				<a href='mailto:nikhil@nklsrh.com' alt='Email' target='_blank'><img class='icons' alt='Email' src='email.png'/></a>	
-				<a href='http://www.linkedin.com/in/nikhil-suresh-93838b134/' alt='LinkedIn' target='_blank'><img class='icons' alt='Blog' src='linkedin.png'/></a>	
-			</div>
-		</footer>
-	</body>
-	<script>
-		function switchToNikhil () {
-			document.getElementById ("name").innerHTML = "NIKHIL SURESH";
-		}
-		function switchToNKL () {
-			document.getElementById ("name").innerHTML = "NKLSRH";
-		}
-	</script>
+      <article class="card">
+        <div class="media"><img src="screenies/fast.gif" alt="Fast &amp; Furious: Takedown" loading="lazy"></div>
+        <div class="body">
+          <div class="meta">Space Ape · 2018 – 2021</div>
+          <h3>Finding product/market fit</h3>
+          <p>Product engineering lead on prototype teams. Soft-launched (and killed) a bucketload of games hunting for product/market fit. Cut my teeth on live titles like Transformers: Earth Wars.</p>
+          <div class="tags"><span class="tag">Prototyping</span><span class="tag">Soft launch</span><span class="tag">Unity / C#</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="media"><img src="screenies/ds2.gif" alt="Death Squared" loading="lazy"></div>
+        <div class="body">
+          <div class="meta">SMG Studio · 2015 – 2018</div>
+          <h3>Shipping on every platform</h3>
+          <p>Gameplay, UI, physics and plugins across mobile, PC and console: Death Squared, Thumb Drift, Hasbro's Risk and Fast &amp; Furious: Takedown.</p>
+          <div class="tags"><span class="tag">PS4 / Xbox / Steam</span><span class="tag">Mobile</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>How I work</h2>
+    </div>
+    <div class="how">
+      <div>
+        <div class="icon">🛠️</div>
+        <h3>Show me the prototype</h3>
+        <p>I'd rather build it than write a PRD about it. I speak engineering fluently and still ship code.</p>
+      </div>
+      <div>
+        <div class="icon">✨</div>
+        <h3>Delight is the product</h3>
+        <p>AI makes everyone a builder. What matters now is whether your software <em>feels</em> good: the tiny details that make you smile.</p>
+      </div>
+      <div>
+        <div class="icon">🚀</div>
+        <h3>0 → 1, then scale</h3>
+        <p>Founder instincts and big-game live ops. Global audiences across India, Europe and the US.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="section-head">
+      <h2>Experience</h2>
+    </div>
+    <ul class="timeline">
+      <li><div class="when">2025 – now</div><div><h3>Senior Product Manager <small>· Duolingo</small></h3><p>Leading a team making music learning genuinely fun.</p></div></li>
+      <li><div class="when">2024 – 2025</div><div><h3>Founding Product Lead <small>· NextBeat (acquired by Duolingo)</small></h3><p>Prototyped music gaming and learning apps, then got acquired.</p></div></li>
+      <li><div class="when">2022 – 2024</div><div><h3>Product Lead, Beatstar <small>· Space Ape Games</small></h3><p>$100M+ lifetime revenue. Launched Country Star ($10M+).</p></div></li>
+      <li><div class="when">2018 – 2022</div><div><h3>Product Engineering Lead / Senior Engineer <small>· Space Ape Games</small></h3><p>Lead dev on prototype teams; live ops on Transformers and Treasure Tails.</p></div></li>
+      <li><div class="when">2015 – now</div><div><h3>Founder &amp; Solo Developer <small>· Super Cricket</small></h3><p>2M+ players. Still not sure why.</p></div></li>
+      <li><div class="when">2015 – 2018</div><div><h3>Software Engineer <small>· SMG Studio</small></h3><p>Death Squared, Thumb Drift, Hasbro's Risk, Fast &amp; Furious: Takedown.</p></div></li>
+    </ul>
+  </section>
+
+  <section id="games">
+    <div class="section-head">
+      <h2>Where it started</h2>
+      <p>Games I made in my spare time since 2011: code, art and design, all self-published. Every one taught me something about what makes people keep playing.</p>
+    </div>
+    <div class="games">
+      <a class="game" href="supercricket/"><img src="screenies/sc2.png" alt=""><span>Super Cricket 2</span></a>
+      <a class="game" href="https://play.google.com/store/apps/details?id=com.nklsrh.supercricketfree" target="_blank" rel="noopener"><img src="screenies/sc1.png" alt=""><span>Super Cricket: All Stars</span></a>
+      <a class="game" href="work.html"><img src="screenies/blastr3.gif" alt=""><span>BLASTR</span></a>
+      <a class="game" href="airracing.html"><img src="screenies/ar3.gif" alt=""><span>Air Racing</span></a>
+      <a class="game" href="cargo.html"><img src="screenies/ca.jpg" alt=""><span>CARGO</span></a>
+      <a class="game" href="downforce.html"><img src="screenies/df (1).jpg" alt=""><span>DownForce</span></a>
+      <a class="game" href="bouncy.html"><img src="screenies/b.jpg" alt=""><span>Bouncy</span></a>
+      <a class="game" href="classic.html"><img src="images/splash.png" alt=""><span>The old site →</span></a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2>Let's make something delightful.</h2>
+      <p>Open to conversations about gamification, product strategy and 0 → 1 builds. Based in Galway, Ireland 🇮🇪, originally from Sydney 🇦🇺.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:nklsrh@gmail.com">nklsrh@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/nklsrh/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Nikhil Suresh. Still searching for the world's best Oreo milkshake.</span>
+    <span><a href="https://delightfulproduct.com">delightfulproduct.com</a></span>
+  </footer>
+
+</div>
+</body>
 </html>
