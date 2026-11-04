@@ -8,15 +8,18 @@
 <meta property="og:title" content="Nikhil Suresh – Gamification & Product Leader">
 <meta property="og:description" content="A PM who codes, a designer who ships, and a strategist obsessed with the micro-moments that make software feel alive.">
 <meta property="og:image" content="https://www.nikhilsuresh.com/screenies/beatstar.gif">
-<meta name="theme-color" content="#121212">
+<meta name="theme-color" content="#f1ece2">
 <link rel="icon" href="ico.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 <style>
   :root {
-    color-scheme: dark;
-    --gutter: #121212;
+    color-scheme: light;
+    --gutter: #1a1a1a;
+    --page: #f1ece2;
+    --text: #1d1c1a;
+    --soft: #6c675d;
     --ink: #fbfaf6;
     --muted: #a8a7a1;
     --line: rgba(255,255,255,.85);
@@ -34,8 +37,8 @@
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
-    background: var(--gutter);
-    color: var(--ink);
+    background: var(--page);
+    color: var(--text);
     font: 17px/1.6 "DM Sans", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
@@ -44,6 +47,7 @@
   h1, h2, h3, .logo, .stat b { font-family: Unbounded, "DM Sans", sans-serif; line-height: 1.08; margin: 0; font-weight: 700; letter-spacing: -0.02em; }
 
   /* every section is a flat "court" panel with white markings */
+  .panel, .card { color: var(--ink); }
   .panel { position: relative; overflow: hidden; border-radius: 6px; margin-bottom: 16px; }
   .panel > .lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
   .panel > .lines * { fill: none; stroke: var(--mark); stroke-width: 3; vector-effect: non-scaling-stroke; }
@@ -52,20 +56,20 @@
   /* ---------- nav ---------- */
   nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
   .logo { font-size: 18px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
-  .logo em { font-style: normal; font-family: "DM Sans", sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0; color: var(--muted); }
+  .logo em { font-style: normal; font-family: "DM Sans", sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0; color: var(--soft); }
   .logo svg { width: 22px; height: 22px; flex: none; transition: transform .5s; }
   .logo:hover svg { transform: rotate(200deg); }
   nav ul { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; font-weight: 500; }
-  nav ul a { text-decoration: none; color: var(--muted); }
-  nav ul a:hover { color: var(--ink); }
+  nav ul a { text-decoration: none; color: var(--soft); }
+  nav ul a:hover { color: var(--text); }
 
   /* ---------- hero: cricket ground ---------- */
   .hero { background: repeating-linear-gradient(90deg, var(--grass) 0 64px, var(--grass-2) 64px 128px); }
   .hero .inner { display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; align-items: center; }
   .hero h1 { font-size: clamp(32px, 4.4vw, 54px); font-weight: 800; letter-spacing: -0.03em; text-shadow: 0 2px 0 rgba(0,0,0,.08); }
-  .hero h1 .scramble { color: var(--ball); white-space: nowrap; }
+  .hero h1 .scramble { color: var(--ball); white-space: nowrap; display: inline-block; text-align: left; }
   .hero h1 .scramble i { font-style: normal; color: var(--sand); }
-  .hero p { font-size: 18px; color: rgba(255,255,255,.88); max-width: 480px; margin: 20px 0 28px; }
+  .hero .btns { margin-top: 32px; }
   .btns { display: flex; gap: 12px; flex-wrap: wrap; }
   .btn { display: inline-block; padding: 12px 20px; border-radius: 4px; font-family: Unbounded, sans-serif; font-weight: 500; font-size: 14px; text-decoration: none; border: 2px solid var(--ink); transition: transform .15s; }
   .btn.primary { background: var(--ink); color: var(--gutter); }
@@ -81,15 +85,15 @@
 
   /* ---------- stats ---------- */
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); padding: 28px 0 72px; }
-  .stat { padding: 0 20px; border-left: 1px solid #2a2a2a; }
+  .stat { padding: 0 20px; border-left: 1px solid #d8d1c3; }
   .stat:first-child { border-left: 0; padding-left: 0; }
   .stat b { display: block; font-size: 24px; }
-  .stat span { font-size: 14px; color: var(--muted); }
+  .stat span { font-size: 14px; color: var(--soft); }
 
   section { margin-bottom: 88px; }
   .section-head { margin-bottom: 28px; }
   .section-head h2 { font-size: clamp(28px, 4vw, 40px); }
-  .section-head p { color: var(--muted); margin: 12px 0 0; max-width: 600px; }
+  .section-head p { color: var(--soft); margin: 12px 0 0; max-width: 600px; }
 
   /* ---------- work: a grid of court posters ---------- */
   .work { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
@@ -124,7 +128,7 @@
 
   /* ---------- games grid ---------- */
   .games { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-  .game { position: relative; border-radius: 6px; overflow: hidden; aspect-ratio: 3/4; background: #1e1e1e; transition: transform .25s; }
+  .game { position: relative; border-radius: 6px; overflow: hidden; aspect-ratio: 3/4; background: #ddd5c6; transition: transform .25s; }
   a.game:hover { transform: translateY(-4px); }
   .game img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .game span { position: absolute; left: 8px; bottom: 8px; background: var(--gutter); color: #fff; padding: 4px 9px; border-radius: 3px; font-family: Unbounded, sans-serif; font-weight: 500; font-size: 11px; }
@@ -136,7 +140,7 @@
   .contact p { color: rgba(255,255,255,.88); max-width: 520px; margin: 16px auto 28px; }
   .contact .btns { justify-content: center; }
 
-  footer { color: var(--muted); font-size: 14px; padding: 8px 0 40px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  footer { color: var(--soft); font-size: 14px; padding: 8px 0 40px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 
   @media (max-width: 760px) {
     nav ul { display: none; }
@@ -181,8 +185,7 @@
     </svg>
     <div class="inner">
       <div>
-        <h1 aria-label="I build software that makes you smile!">I <span class="scramble" aria-hidden="true">build</span> software that makes you smile!</h1>
-        <p>With a background in videogames, I'm a PM who codes, a designer who ships, and a strategist obsessed with the micro-moments that make software feel alive.</p>
+        <h1 aria-label="I build software that makes you smile!">I <span class="scramble" aria-hidden="true">build</span><br>software that makes you smile!</h1>
         <div class="btns">
           <a class="btn primary" href="mailto:nklsrh@gmail.com">Get in touch</a>
           <a class="btn" href="https://www.linkedin.com/in/nklsrh/" target="_blank" rel="noopener">LinkedIn</a>
@@ -327,6 +330,17 @@
     var words = ['build', 'design', 'craft', 'ship', 'prototype', 'code', 'dream up', 'playtest', 'polish'];
     var glyphs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ#%&*+=<>?!@$';
     var i = 0;
+    // reserve the widest word's width so the headline never reflows
+    function reserve() {
+      var w = 0, cur = el.textContent;
+      el.style.minWidth = '';
+      words.forEach(function (word) { el.textContent = word; w = Math.max(w, el.getBoundingClientRect().width); });
+      el.textContent = cur;
+      el.style.minWidth = Math.ceil(w) + 'px';
+    }
+    reserve();
+    if (document.fonts) document.fonts.ready.then(reserve);
+    addEventListener('resize', reserve);
     function scrambleTo(target) {
       var from = el.textContent, len = Math.max(from.length, target.length), frame = 0, total = 22;
       (function tick() {
