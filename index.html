@@ -69,6 +69,8 @@
   .hero { display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; align-items: center; padding: 28px 0 56px; }
   .eyebrow { display: inline-block; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .1em; color: var(--deep); background: var(--kelp); padding: 5px 12px; border-radius: 99px; margin-bottom: 18px; transform: rotate(-2deg); }
   .hero h1 { font-size: clamp(34px, 4.6vw, 58px); font-weight: 800; letter-spacing: -0.03em; }
+  .hero h1 .scramble { color: var(--sea); white-space: nowrap; }
+  .hero h1 .scramble i { font-style: normal; color: var(--lilac); }
   .hero h1 .wob { display: inline-block; color: var(--sun); animation: bob 3s ease-in-out infinite; }
   .hero h1 .wob:nth-child(2) { color: var(--coral); animation-delay: .4s; }
   @keyframes bob { 50% { transform: translateY(-6px) rotate(-3deg); } }
@@ -211,7 +213,7 @@
   <header class="hero">
     <div>
       <div class="eyebrow">Gamification &amp; Product Leader</div>
-      <h1>I build software that makes you <span class="wob">smile</span><span class="wob">!</span></h1>
+      <h1 aria-label="I build software that makes you smile!">I <span class="scramble" aria-hidden="true">build</span> software that makes you <span class="wob">smile</span><span class="wob">!</span></h1>
       <p>With a background in videogames, I'm a PM who codes, a designer who ships, and a strategist obsessed with the micro-moments that make software feel alive.</p>
       <div class="btns">
         <a class="btn primary" href="mailto:nklsrh@gmail.com">Get in touch</a>
@@ -374,5 +376,30 @@
   </div>
 </footer>
 
+<script>
+  // Scramble the verb in the hero heading through a list of words
+  (function () {
+    var el = document.querySelector('.scramble');
+    if (!el || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var words = ['build', 'design', 'craft', 'ship', 'prototype', 'code', 'dream up', 'playtest', 'polish'];
+    var glyphs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ#%&*+=<>?!@$';
+    var i = 0;
+    function scrambleTo(target) {
+      var from = el.textContent, len = Math.max(from.length, target.length), frame = 0, total = 22;
+      (function tick() {
+        var out = '';
+        for (var c = 0; c < len; c++) {
+          var settleAt = Math.floor(total * (c + 1) / len);
+          if (frame >= settleAt) out += target[c] || '';
+          else if (c < Math.max(target.length, len - Math.floor(frame / 3))) out += '<i>' + glyphs[Math.floor(Math.random() * glyphs.length)] + '</i>';
+        }
+        el.innerHTML = out;
+        if (frame++ < total) requestAnimationFrame(tick);
+        else el.textContent = target;
+      })();
+    }
+    setInterval(function () { i = (i + 1) % words.length; scrambleTo(words[i]); }, 2400);
+  })();
+</script>
 </body>
 </html>
