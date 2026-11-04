@@ -59,6 +59,7 @@
   /* ---------- nav ---------- */
   nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; }
   .logo { font-size: 20px; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+  .logo em { font-style: normal; font-family: "DM Sans", sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0; color: var(--muted); }
   .logo svg { width: 34px; transition: transform .4s cubic-bezier(.3,1.8,.5,1); }
   .logo:hover svg { transform: rotate(-15deg) scale(1.15); }
   nav ul { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; font-weight: 500; }
@@ -67,7 +68,6 @@
 
   /* ---------- hero ---------- */
   .hero { display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; align-items: center; padding: 28px 0 56px; }
-  .eyebrow { display: inline-block; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .1em; color: var(--deep); background: var(--kelp); padding: 5px 12px; border-radius: 99px; margin-bottom: 18px; transform: rotate(-2deg); }
   .hero h1 { font-size: clamp(34px, 4.6vw, 58px); font-weight: 800; letter-spacing: -0.03em; }
   .hero h1 .scramble { color: var(--sea); white-space: nowrap; }
   .hero h1 .scramble i { font-style: normal; color: var(--lilac); }
@@ -91,9 +91,6 @@
   .mosaic span { position: absolute; left: 10px; bottom: 10px; right: 10px; background: var(--deep); color: var(--ink); font-size: 14px; line-height: 1.3; padding: 8px 12px; border-radius: 14px; }
   .mosaic b { display: block; font-family: Unbounded, sans-serif; font-size: 15px; color: var(--c); }
 
-  /* ---------- depth labels ---------- */
-  .depth { display: inline-flex; align-items: center; gap: 8px; font-family: Unbounded, sans-serif; font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--sea); margin-bottom: 10px; }
-  .depth::before { content: ""; width: 26px; height: 3px; background: currentColor; border-radius: 3px; }
 
   /* ---------- stats ---------- */
   .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 100px; }
@@ -134,6 +131,10 @@
   .timeline li { position: relative; padding: 0 0 30px 10px; }
   .timeline li::before { content: ""; position: absolute; left: -43px; top: 4px; width: 22px; height: 22px; border-radius: 50%; background: var(--deep); border: 4px solid var(--c, var(--sea)); }
   .timeline li:nth-child(2) { --c: var(--kelp); } .timeline li:nth-child(3) { --c: var(--coral); } .timeline li:nth-child(4) { --c: var(--lilac); } .timeline li:nth-child(5) { --c: var(--sun); } .timeline li:nth-child(6) { --c: var(--sand); }
+  .timeline li::before { display: none; }
+  .timeline li { display: flex; gap: 18px; align-items: flex-start; }
+  .timeline .co { flex: none; width: 56px; height: 56px; border-radius: 14px; object-fit: cover; background: #fff; }
+  .timeline span.co { display: grid; place-items: center; background: var(--b); color: #fff; font-family: Unbounded, sans-serif; font-weight: 800; font-size: 24px; }
   .timeline .when { font-family: Unbounded, sans-serif; font-weight: 600; font-size: 15px; color: var(--c, var(--sea)); }
   .timeline h3 { font-size: 18px; margin: 2px 0; }
   .timeline h3 small { font-family: "DM Sans", sans-serif; font-weight: 500; font-size: 16px; color: var(--muted); }
@@ -143,7 +144,8 @@
   .games { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .game { position: relative; border-radius: 22px; overflow: hidden; aspect-ratio: 1; background: var(--deep-2); transition: transform .35s cubic-bezier(.3,1.8,.5,1); }
   .game:nth-child(odd) { transform: rotate(-1.5deg); } .game:nth-child(even) { transform: rotate(1.5deg); }
-  .game:hover { transform: rotate(0) scale(1.06); z-index: 2; }
+  div.game:hover { transform: none; }
+  a.game:hover { transform: rotate(0) scale(1.06); z-index: 2; }
   .game img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .game span { position: absolute; left: 8px; bottom: 8px; background: var(--deep); color: var(--ink); padding: 4px 10px; border-radius: 10px; font-family: Unbounded, sans-serif; font-weight: 500; font-size: 12px; }
 
@@ -201,7 +203,7 @@
 <div class="wrap">
 
   <nav>
-    <a class="logo" href="/"><svg viewBox="0 0 64 34" style="color:var(--sun);--t:var(--coral)"><use href="#fish"/></svg>nikhil</a>
+    <a class="logo" href="/"><svg viewBox="0 0 64 34" style="color:var(--sun);--t:var(--coral)"><use href="#fish"/></svg><span>nikhil suresh <em>| gamification &amp; product leader</em></span></a>
     <ul>
       <li><a href="#work">Work</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -212,7 +214,6 @@
 
   <header class="hero">
     <div>
-      <div class="eyebrow">Gamification &amp; Product Leader</div>
       <h1 aria-label="I build software that makes you smile!">I <span class="scramble" aria-hidden="true">build</span> software that makes you <span class="wob">smile</span><span class="wob">!</span></h1>
       <p>With a background in videogames, I'm a PM who codes, a designer who ships, and a strategist obsessed with the micro-moments that make software feel alive.</p>
       <div class="btns">
@@ -236,7 +237,6 @@
 
   <section id="work">
     <div class="section-head">
-      <div class="depth">−20m · diving in</div>
       <h2>Selected work</h2>
       <p>Games taught me how to make people feel something. Product taught me how to make it matter.</p>
     </div>
@@ -298,39 +298,36 @@
 
   <section id="experience">
     <div class="section-head">
-      <div class="depth">−1000m · deep cuts</div>
       <h2>Experience</h2>
     </div>
     <ul class="timeline">
-      <li><div class="when">2025 – now</div><h3>Senior Product Manager <small>· Duolingo</small></h3><p>Leading a team making music learning genuinely fun.</p></li>
-      <li><div class="when">2024 – 2025</div><h3>Founding Product Lead <small>· NextBeat (acquired by Duolingo)</small></h3><p>Prototyped music gaming and learning apps, then got acquired.</p></li>
-      <li><div class="when">2022 – 2024</div><h3>Product Lead, Beatstar <small>· Space Ape Games</small></h3><p>$100M+ lifetime revenue. Launched Country Star ($10M+).</p></li>
-      <li><div class="when">2018 – 2022</div><h3>Product Engineering Lead / Senior Engineer <small>· Space Ape Games</small></h3><p>Lead dev on prototype teams; live ops on Transformers and Treasure Tails.</p></li>
-      <li><div class="when">2015 – now</div><h3>Founder &amp; Solo Developer <small>· Super Cricket</small></h3><p>2M+ players. Still not sure why.</p></li>
-      <li><div class="when">2015 – 2018</div><h3>Software Engineer <small>· SMG Studio</small></h3><p>Death Squared, Thumb Drift, Hasbro's Risk, Fast &amp; Furious: Takedown.</p></li>
+      <li><span class="co" style="--b:#58cc02">D</span><div><div class="when">2025 – now</div><h3>Senior Product Manager <small>· Duolingo</small></h3><p>Leading a team making music learning genuinely fun.</p></div></li>
+      <li><span class="co" style="--b:#7b5cff">N</span><div><div class="when">2024 – 2025</div><h3>Founding Product Lead <small>· NextBeat (acquired by Duolingo)</small></h3><p>Prototyped music gaming and learning apps, then got acquired.</p></div></li>
+      <li><img class="co" src="images/spaceape.png" alt="Space Ape Games"><div><div class="when">2022 – 2024</div><h3>Product Lead, Beatstar <small>· Space Ape Games</small></h3><p>$100M+ lifetime revenue. Launched Country Star ($10M+).</p></div></li>
+      <li><img class="co" src="images/spaceape.png" alt="Space Ape Games"><div><div class="when">2018 – 2022</div><h3>Product Engineering Lead / Senior Engineer <small>· Space Ape Games</small></h3><p>Lead dev on prototype teams; live ops on Transformers and Treasure Tails.</p></div></li>
+      <li><img class="co" src="sc2/icon.png" alt="Super Cricket"><div><div class="when">2015 – now</div><h3>Founder &amp; Solo Developer <small>· Super Cricket</small></h3><p>2M+ players. Still not sure why.</p></div></li>
+      <li><img class="co" src="images/smgstudio.png" alt="SMG Studio"><div><div class="when">2015 – 2018</div><h3>Software Engineer <small>· SMG Studio</small></h3><p>Death Squared, Thumb Drift, Hasbro's Risk, Fast &amp; Furious: Takedown.</p></div></li>
     </ul>
   </section>
 
   <section id="games">
     <div class="section-head">
-      <div class="depth">−4000m · ancient shipwrecks</div>
       <h2>Where it started</h2>
       <p>Games I made in my spare time since 2011: code, art and design, all self-published. Every one taught me something about what makes people keep playing.</p>
     </div>
     <div class="games">
-      <a class="game" href="supercricket/"><img src="screenies/sc2.png" alt=""><span>Super Cricket 2</span></a>
-      <a class="game" href="https://play.google.com/store/apps/details?id=com.nklsrh.supercricketfree" target="_blank" rel="noopener"><img src="screenies/sc1.png" alt=""><span>Super Cricket: All Stars</span></a>
-      <a class="game" href="work.html"><img src="screenies/blastr3.gif" alt=""><span>BLASTR</span></a>
-      <a class="game" href="airracing.html"><img src="screenies/ar3.gif" alt=""><span>Air Racing</span></a>
-      <a class="game" href="cargo.html"><img src="screenies/ca.jpg" alt=""><span>CARGO</span></a>
-      <a class="game" href="downforce.html"><img src="screenies/df (1).jpg" alt=""><span>DownForce</span></a>
-      <a class="game" href="bouncy.html"><img src="screenies/b.jpg" alt=""><span>Bouncy</span></a>
-      <a class="game" href="classic.html"><img src="images/splash.png" alt=""><span>The old site →</span></a>
+      <a class="game" href="https://play.google.com/store/apps/details?id=com.nklsrh.supercricket3" target="_blank" rel="noopener"><img src="screenies/sc3.gif" alt=""><span>Super Cricket 3 ↗</span></a>
+      <a class="game" href="https://play.google.com/store/apps/details?id=com.nklsrh.supercrickethd" target="_blank" rel="noopener"><img src="screenies/sc2.png" alt=""><span>Super Cricket 2 ↗</span></a>
+      <a class="game" href="https://play.google.com/store/apps/details?id=com.nklsrh.supercricketfree" target="_blank" rel="noopener"><img src="screenies/sc1.png" alt=""><span>Super Cricket: All Stars ↗</span></a>
+      <a class="game" href="https://play.google.com/store/apps/details?id=com.nklsrh.airracing" target="_blank" rel="noopener"><img src="screenies/ar3.gif" alt=""><span>Air Racing ↗</span></a>
+      <a class="game" href="https://play.google.com/store/apps/details?id=com.nklsrh.superracing" target="_blank" rel="noopener"><img src="screenies/df (1).jpg" alt=""><span>DownForce ↗</span></a>
+      <div class="game"><img src="screenies/blastr3.gif" alt=""><span>BLASTR</span></div>
+      <div class="game"><img src="screenies/ca.jpg" alt=""><span>CARGO</span></div>
+      <div class="game"><img src="screenies/b.jpg" alt=""><span>Bouncy &amp; the Apple</span></div>
     </div>
   </section>
 
   <section id="contact" class="contact">
-    <div class="depth">seabed · you made it</div>
     <h2>Let's make something delightful.</h2>
     <p>Open to conversations about gamification, product strategy and 0 → 1 builds. Based in Galway, Ireland 🇮🇪, originally from Sydney 🇦🇺.</p>
     <div class="btns">
