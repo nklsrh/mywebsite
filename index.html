@@ -49,8 +49,9 @@
   /* every section is a flat "court" panel with white markings */
   .panel, .card { color: var(--ink); }
   .panel { position: relative; overflow: hidden; border-radius: 6px; margin-bottom: 16px; }
-  .panel > .lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-  .panel > .lines * { fill: none; stroke: var(--mark); stroke-width: 3; vector-effect: non-scaling-stroke; }
+  .card > .lines { opacity: .55; }
+  .card > .lines, .panel > .lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  .card > .lines *, .panel > .lines * { fill: none; stroke: var(--mark); stroke-width: 3; vector-effect: non-scaling-stroke; }
   .panel > .inner { position: relative; padding: 56px; }
 
   /* ---------- nav ---------- */
@@ -84,10 +85,11 @@
   .mosaic span { position: absolute; left: 10px; bottom: 10px; background: var(--gutter); color: #fff; font-family: Unbounded, sans-serif; font-weight: 500; font-size: 12px; padding: 5px 10px; border-radius: 3px; transition: opacity .5s; }
 
   /* ---------- stats ---------- */
-  .stats { display: grid; grid-template-columns: repeat(4, 1fr); padding: 28px 0 72px; }
-  .stat { padding: 0 20px; border-left: 1px solid #d8d1c3; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); background: #17331f; border-radius: 6px; padding: 22px 26px; margin-bottom: 72px; border: 6px solid #0f2415; box-shadow: inset 0 0 0 2px #2c5a38; }
+  .stat { padding: 0 20px; border-left: 2px solid #2c5a38; }
   .stat:first-child { border-left: 0; padding-left: 0; }
-  .stat b { display: block; font-size: 24px; }
+  .stat b { display: block; font-size: 26px; color: var(--ball); font-variant-numeric: tabular-nums; text-shadow: 0 0 12px rgba(244,197,66,.45); }
+  .stats .stat span { color: rgba(255,255,255,.7); text-transform: uppercase; letter-spacing: .06em; font-size: 12px; }
   .stat span { font-size: 14px; color: var(--soft); }
 
   section { margin-bottom: 88px; }
@@ -101,6 +103,7 @@
   .card:nth-child(2) { --c: var(--clay); } .card:nth-child(3) { --c: var(--turf); } .card:nth-child(4) { --c: var(--sky); } .card:nth-child(5) { --c: #8a6a3f; }
   .card:hover { transform: translateY(-4px); }
   .card.wide { grid-column: span 2; flex-direction: row; }
+  .card > .media, .card > .body { position: relative; }
   .card .media { aspect-ratio: 16/10; overflow: hidden; margin: 16px 16px 0; border-radius: 3px; box-shadow: 8px 10px 0 rgba(0,0,0,.18); }
   .card.wide .media { aspect-ratio: auto; flex: 1; max-height: 420px; margin: 16px 0 16px 16px; }
   .card.wide .body { align-self: center; }
@@ -150,7 +153,7 @@
     .hero { background: repeating-linear-gradient(90deg, var(--grass) 0 40px, var(--grass-2) 40px 80px); }
     .hero .inner { grid-template-columns: 1fr; gap: 28px; }
     .mosaic { height: 340px; }
-    .stats { grid-template-columns: repeat(2, 1fr); row-gap: 18px; padding-bottom: 56px; }
+    .stats { grid-template-columns: repeat(2, 1fr); row-gap: 18px; }
     .stat:nth-child(3) { border-left: 0; padding-left: 0; }
     .work { grid-template-columns: 1fr; }
     .card.wide { grid-column: auto; flex-direction: column; }
@@ -171,8 +174,8 @@
       <span>nikhil suresh <em>| gamification &amp; product leader</em></span>
     </a>
     <ul>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#experience">Experience</a></li>
+      <li><a href="#work">Highlights</a></li>
+      <li><a href="#experience">Career</a></li>
       <li><a href="#games">Games</a></li>
       <li><a href="#contact">Say hi</a></li>
     </ul>
@@ -199,7 +202,7 @@
     </div>
   </header>
 
-  <div class="stats">
+  <div class="stats" aria-label="Scoreboard">
     <div class="stat"><b>$100M+</b><span>Beatstar lifetime revenue</span></div>
     <div class="stat"><b>2M+</b><span>Super Cricket players</span></div>
     <div class="stat"><b>1 exit</b><span>NextBeat → Duolingo</span></div>
@@ -208,12 +211,13 @@
 
   <section id="work">
     <div class="section-head">
-      <h2>Selected work</h2>
+      <h2>Highlights</h2>
       <p>Games taught me how to make people feel something. Product taught me how to make it matter.</p>
     </div>
     <div class="work">
 
       <article class="card wide">
+        <svg class="lines" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><line x1="0" y1="40" x2="1000" y2="40"/><line x1="0" y1="560" x2="1000" y2="560"/><line x1="0" y1="300" x2="1000" y2="300" stroke-dasharray="6 8"/><line x1="500" y1="40" x2="500" y2="560"/></svg>
         <div class="media"><img src="screenies/beatstar.gif" alt="Beatstar gameplay" loading="lazy"></div>
         <div class="body">
           <div class="meta">Duolingo · NextBeat · 2024 – now</div>
@@ -224,6 +228,7 @@
       </article>
 
       <article class="card">
+        <svg class="lines" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect x="380" y="-10" width="240" height="260"/><circle cx="500" cy="250" r="120"/><path d="M120 -10 V120 A380 380 0 0 0 880 120 V-10"/></svg>
         <div class="media"><img src="screenies/countrystar.gif" alt="Country Star gameplay" loading="lazy"></div>
         <div class="body">
           <div class="meta">Space Ape Games · 2021 – 2024</div>
@@ -234,6 +239,7 @@
       </article>
 
       <article class="card">
+        <svg class="lines" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect x="440" y="-10" width="120" height="620" style="fill:rgba(233,189,118,.25)"/><line x1="410" y1="80" x2="590" y2="80"/><line x1="410" y1="520" x2="590" y2="520"/><circle cx="500" cy="300" r="420"/></svg>
         <div class="media"><img src="screenies/sc3.gif" alt="Super Cricket 3 gameplay" loading="lazy"></div>
         <div class="body">
           <div class="meta">Founder · 2015 – now</div>
@@ -245,6 +251,7 @@
       </article>
 
       <article class="card">
+        <svg class="lines" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><line x1="0" y1="120" x2="1000" y2="120" stroke-dasharray="14 10"/><line x1="0" y1="240" x2="1000" y2="240" stroke-dasharray="14 10"/><line x1="0" y1="360" x2="1000" y2="360" stroke-dasharray="14 10"/><line x1="0" y1="480" x2="1000" y2="480" stroke-dasharray="14 10"/></svg>
         <div class="media"><img src="screenies/fast.gif" alt="Fast &amp; Furious: Takedown" loading="lazy"></div>
         <div class="body">
           <div class="meta">Space Ape · 2018 – 2021</div>
@@ -255,6 +262,7 @@
       </article>
 
       <article class="card">
+        <svg class="lines" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path d="M500 560 L260 320 L500 80 L740 320 Z"/><circle cx="500" cy="330" r="40"/><path d="M500 560 L-100 -40 M500 560 L1100 -40"/></svg>
         <div class="media"><img src="screenies/ds2.gif" alt="Death Squared" loading="lazy"></div>
         <div class="body">
           <div class="meta">SMG Studio · 2015 – 2018</div>
@@ -272,7 +280,7 @@
       <path d="M1000 380 A 220 220 0 0 0 780 600"/><path d="M1000 330 A 270 270 0 0 0 730 600"/><path d="M1000 280 A 320 320 0 0 0 680 600"/>
     </svg>
     <div class="inner">
-      <div class="section-head"><h2>Experience</h2></div>
+      <div class="section-head"><h2>Career</h2></div>
     <ul class="timeline">
       <li><img class="co" src="images/logos/duolingo.png" alt="Duolingo"><div><div class="when">2025 – now</div><h3>Senior Product Manager <small>· Duolingo</small></h3><p>Leading a team making music learning genuinely fun.</p></div></li>
       <li><img class="co" src="images/logos/nextbeat.png" alt="NextBeat"><div><div class="when">2024 – 2025</div><h3>Founding Product Lead <small>· NextBeat (acquired by Duolingo)</small></h3><p>Prototyped music gaming and learning apps, then got acquired.</p></div></li>
@@ -286,7 +294,7 @@
 
   <section id="games">
     <div class="section-head">
-      <h2>Where it started</h2>
+      <h2>The junior league</h2>
       <p>Games I made in my spare time since 2011: code, art and design, all self-published. Every one taught me something about what makes people keep playing.</p>
     </div>
     <div class="games">
@@ -307,8 +315,8 @@
       <path d="M0 60 H120 V340 H0"/><path d="M1000 60 H880 V340 H1000"/>
     </svg>
     <div class="inner">
-      <h2>Let's make something delightful.</h2>
-      <p>Open to conversations about gamification, product strategy and 0 → 1 builds. Based in Galway, Ireland 🇮🇪, originally from Sydney 🇦🇺.</p>
+      <h2>Fancy a game?</h2>
+      <p>Let's make something delightful. Open to conversations about gamification, product strategy and 0 → 1 builds. Based in Galway, Ireland 🇮🇪, originally from Sydney 🇦🇺.</p>
       <div class="btns">
         <a class="btn primary" href="mailto:nklsrh@gmail.com">nklsrh@gmail.com</a>
         <a class="btn" href="https://www.linkedin.com/in/nklsrh/" target="_blank" rel="noopener">LinkedIn</a>
