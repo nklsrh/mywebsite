@@ -8,7 +8,7 @@
 <meta property="og:title" content="Nikhil Suresh – Gamification & Product Leader">
 <meta property="og:description" content="A PM who codes, a designer who ships, and a strategist obsessed with the micro-moments that make software feel alive.">
 <meta property="og:image" content="https://www.nikhilsuresh.com/screenies/beatstar.gif">
-<meta name="theme-color" content="#3f7444">
+<meta name="theme-color" content="#1d6440">
 <link rel="icon" href="ico.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,33 +17,41 @@
   :root {
     color-scheme: dark;
     --gutter: #1a1a1a;
-    --page: #3f7444;
+    --page: #1d6440;
+    --page-2: #216b45;
     --text: #ffffff;
     --soft: rgba(255,255,255,.72);
     --ink: #fbfaf6;
     --muted: #a8a7a1;
     --line: rgba(255,255,255,.85);
     --mark: rgba(255,255,255,.35);
-    --grass: #4e9a3c;
-    --grass-2: #579f44;
+    --grass: #2f8a52;
+    --grass-2: #35935a;
     --court: #2c5ed1;
     --sky: #5d9ce6;
     --clay: #c24f3a;
     --sand: #e9bd76;
-    --turf: #3f8b4c;
+    --turf: #14502f;
     --ball: #f4c542;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
-    background: var(--page);
+    background: repeating-linear-gradient(180deg, var(--page) 0 140px, var(--page-2) 140px 280px);
     color: var(--text);
     font: 17px/1.6 "DM Sans", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
   a { color: inherit; }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; position: relative; }
+  /* touchlines with yard markers just outside the content column */
+  @media (min-width: 1220px) {
+    .wrap::before, .wrap::after { content: ""; position: absolute; top: 90px; bottom: 0; width: 18px; pointer-events: none;
+      background: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)) no-repeat, repeating-linear-gradient(180deg, rgba(255,255,255,.6) 0 3px, transparent 3px 140px); }
+    .wrap::before { left: -36px; background-size: 3px 100%, 100% 100%; background-position: left top, 0 0; }
+    .wrap::after { right: -36px; background-size: 3px 100%, 100% 100%; background-position: right top, 0 0; }
+  }
   h1, h2, h3, .logo, .stat b { font-family: Unbounded, "DM Sans", sans-serif; line-height: 1.08; margin: 0; font-weight: 700; letter-spacing: -0.02em; }
 
   /* every section is a flat "court" panel with white markings */
