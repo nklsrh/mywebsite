@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nikhil Suresh – Discography</title>
+<meta name="description" content="Mockup: every product I've worked on, as a 90s/2000s disc.">
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --bg: #cdd6de;
+    --bg-2: #d8e0e7;
+    --ink: #1f2430;
+    --soft: #5d6677;
+    --label: #fbfbf8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: radial-gradient(120% 80% at 30% 0%, var(--bg-2), var(--bg));
+    color: var(--ink);
+    font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+  header { padding: 40px 0 8px; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  header h1 { margin: 0; font: 900 clamp(30px, 5vw, 52px)/1 "Arial Black", "Helvetica Neue", Arial, sans-serif; letter-spacing: -0.03em; }
+  header h1 small { display: block; font: 400 15px/1.4 "Helvetica Neue", Arial, sans-serif; letter-spacing: .02em; color: var(--soft); margin-top: 10px; }
+  .tracklist { font: 12px/1.6 "Courier New", monospace; color: var(--soft); text-transform: uppercase; letter-spacing: .08em; text-align: right; }
+  .tracklist b { color: var(--ink); }
+
+  /* ---------- the table of discs ---------- */
+  .table { display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px 22px; padding: 48px 0 80px; }
+
+  .md {
+    --shell: 200, 205, 215;
+    --a: .45;
+    position: relative;
+    aspect-ratio: 1;
+    border: 0; padding: 0; cursor: pointer; text-align: left; color: var(--ink);
+    border-radius: 9px 9px 9px 9px;
+    background:
+      linear-gradient(135deg, rgba(255,255,255,.55), rgba(255,255,255,0) 40%),
+      rgba(var(--shell), var(--a));
+    box-shadow:
+      inset 0 0 0 1.5px rgba(255,255,255,.65),
+      inset 0 -6px 12px rgba(var(--shell), .35),
+      14px 18px 26px -14px rgba(40, 52, 72, .45);
+    -webkit-backdrop-filter: blur(1.5px); backdrop-filter: blur(1.5px);
+    transform: rotate(var(--r, 0deg));
+    transition: transform .35s cubic-bezier(.3, 1.6, .5, 1), box-shadow .35s;
+  }
+  .md:hover, .md:focus-visible { transform: rotate(0deg) translateY(-8px) scale(1.04); z-index: 2; outline: none;
+    box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.7), inset 0 -6px 12px rgba(var(--shell), .35), 18px 30px 36px -16px rgba(40,52,72,.5); }
+
+  /* moulded ridges along the edges */
+  .md::before { content: ""; position: absolute; inset: 6px; border-radius: 6px; border: 1px solid rgba(255,255,255,.35); pointer-events: none; }
+  .md::after { content: ""; position: absolute; left: 10px; right: 10px; bottom: 7px; height: 9px; border-radius: 2px; pointer-events: none;
+    background: repeating-linear-gradient(90deg, rgba(255,255,255,.45) 0 2px, transparent 2px 6px); opacity: .7; }
+
+  .disc {
+    position: absolute; left: 8%; top: 9%; width: 70%; aspect-ratio: 1; border-radius: 50%;
+    background:
+      radial-gradient(circle, rgba(120,128,140,.9) 0 9%, rgba(225,228,234,.95) 9.5% 17%, rgba(150,158,170,.7) 17.5% 19%, transparent 19.5%),
+      conic-gradient(from 20deg, #e9eaee, #c9f2ff, #f2d3ff, #fff2b8, #d4ffe0, #e9eaee 30%, #f6f6f8, #bfe7ff, #ffd0f0, #fff6c9, #e9eaee 70%, #cfeaff, #e9eaee);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.6), inset 0 0 18px rgba(255,255,255,.4);
+    opacity: .92;
+    transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+  }
+  .md:hover .disc { transform: rotate(240deg); }
+
+  .shutter { position: absolute; top: 0; left: 14%; width: 46%; height: 13%; border-radius: 0 0 4px 4px;
+    background: linear-gradient(180deg, rgba(255,255,255,.7), rgba(var(--shell), .6)); box-shadow: inset 0 -1px 0 rgba(0,0,0,.08); }
+  .insert { position: absolute; top: 3%; right: 9%; font: 700 8px/1 "Courier New", monospace; letter-spacing: .1em; color: rgba(31,36,48,.55); text-transform: uppercase; }
+
+  .label {
+    position: absolute; right: 7%; bottom: 14%; width: 44%; padding: 8px 9px 9px;
+    background: var(--label); border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.08), inset 0 0 0 1px rgba(0,0,0,.04);
+  }
+  .label .brand { display: block; padding-right: 22px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font: 700 9px/1 "Helvetica Neue", Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--soft); }
+  .label .name { display: block; margin-top: 0; padding-right: 26px; font: 900 14px/1.05 "Arial Black", "Helvetica Neue", Arial, sans-serif; letter-spacing: -0.02em; }
+  .label .yr { position: absolute; right: 8px; top: 6px; font: 900 13px/1 "Arial Black", Arial, sans-serif; color: var(--stripe, #2a62d4); }
+  .label::after { content: ""; display: block; height: 4px; margin-top: 7px; background: var(--stripe, #2a62d4); border-radius: 1px; }
+
+  .side { position: absolute; left: 9%; bottom: 7%; font: italic 700 11px/1 Georgia, serif; color: rgba(255,255,255,.9); text-shadow: 0 1px 0 rgba(0,0,0,.12); letter-spacing: .04em; }
+
+  /* shells: translucent plastic colours from the references */
+  .clear   { --shell: 214, 220, 228; --a: .35; --stripe: #1f2430; }
+  .purple  { --shell: 92, 84, 214;  --a: .62; --stripe: #5c54d6; }
+  .white   { --shell: 246, 246, 242; --a: .88; --stripe: #d9b22c; }
+  .green   { --shell: 34, 178, 160;  --a: .62; --stripe: #12806f; }
+  .pink    { --shell: 238, 128, 150; --a: .62; --stripe: #e2435f; }
+  .smoke   { --shell: 120, 126, 140; --a: .5;  --stripe: #3c4250; }
+  .magenta { --shell: 184, 40, 140;  --a: .62; --stripe: #2338c8; }
+  .sky     { --shell: 82, 188, 226;  --a: .55; --stripe: #1e88d8; }
+  .amber   { --shell: 246, 170, 40;  --a: .6;  --stripe: #d96a10; }
+  .lime    { --shell: 150, 214, 60;  --a: .6;  --stripe: #4c8a12; }
+
+  /* ---------- jewel case detail ---------- */
+  dialog { border: 0; padding: 0; background: transparent; max-width: min(860px, calc(100vw - 32px)); width: 100%; }
+  dialog::backdrop { background: rgba(60, 70, 88, .45); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+  .case {
+    position: relative; display: grid; grid-template-columns: 1.1fr 1fr; gap: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,.92), rgba(236,240,246,.88));
+    border-radius: 6px; overflow: hidden;
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,.9), 0 40px 80px -30px rgba(20,30,50,.6);
+  }
+  .case::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 18px; z-index: 1;
+    background: repeating-linear-gradient(180deg, rgba(255,255,255,.7) 0 2px, rgba(200,208,220,.6) 2px 5px); border-right: 1px solid rgba(0,0,0,.06); }
+  .case .art { background: #111; height: min(520px, 70vh); }
+  .case .art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .case .notes { padding: 28px 30px 30px; }
+  .case .brand { font: 700 11px/1 "Helvetica Neue", Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--soft); }
+  .case h2 { margin: 8px 0 4px; font: 900 30px/1.05 "Arial Black", Arial, sans-serif; letter-spacing: -0.02em; }
+  .case .meta { font: 12px/1.6 "Courier New", monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--soft); }
+  .case p { margin: 14px 0 0; }
+  .case ol { margin: 16px 0 0; padding: 0; list-style: none; counter-reset: t; font-size: 14px; }
+  .case ol li { counter-increment: t; padding: 6px 0; border-top: 1px dotted #b9c1cc; }
+  .case ol li::before { content: counter(t, decimal-leading-zero) "  "; font: 12px "Courier New", monospace; color: var(--soft); }
+  .case a.play { display: inline-block; margin-top: 18px; padding: 9px 14px; background: var(--ink); color: #fff; text-decoration: none; font: 700 13px/1 "Helvetica Neue", Arial, sans-serif; border-radius: 3px; }
+  .close { position: absolute; right: 10px; top: 10px; z-index: 2; width: 34px; height: 34px; border-radius: 50%; border: 0; background: rgba(255,255,255,.9); font: 700 18px/1 Arial; cursor: pointer; }
+
+  footer { padding: 0 0 48px; font: 12px/1.6 "Courier New", monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--soft); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  footer a { color: var(--ink); }
+
+  @media (max-width: 1000px) { .table { grid-template-columns: repeat(4, 1fr); } }
+  @media (max-width: 860px) { .table { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 600px) {
+    .table { grid-template-columns: repeat(2, 1fr); gap: 20px 16px; padding-top: 32px; }
+    .tracklist { text-align: left; }
+    .label .name { font-size: 12px; }
+    .case { grid-template-columns: 1fr; }
+    .case .art { height: 240px; }
+    dialog { max-height: 92vh; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>nikhil suresh<small>Gamification &amp; product leader. Every disc is something I helped make.</small></h1>
+    <div class="tracklist"><b>Discography</b><br>1 side · 10 tracks · 2011–2026<br>tap a disc to open the case</div>
+  </header>
+
+  <main class="table" id="table"></main>
+
+  <footer>
+    <span>© 2026 Nikhil Suresh · <a href="mailto:nklsrh@gmail.com">nklsrh@gmail.com</a> · <a href="https://www.linkedin.com/in/nklsrh/">LinkedIn</a></span>
+    <span>Mockup · not linked from the main site</span>
+  </footer>
+</div>
+
+<dialog id="case">
+  <div class="case">
+    <button class="close" aria-label="Close">×</button>
+    <div class="art"><img alt=""></div>
+    <div class="notes">
+      <div class="brand"></div>
+      <h2></h2>
+      <div class="meta"></div>
+      <p class="blurb"></p>
+      <ol class="tracks"></ol>
+    </div>
+  </div>
+</dialog>
+
+<script>
+  var discs = [
+    { name: 'Duolingo Music', brand: 'Duolingo', yr: '26', shell: 'lime', img: 'screenies/beatstar.gif', role: 'Senior Product Manager · 2025–now',
+      blurb: 'Leading a team making music learning genuinely fun, with retention psychology, habit formation and emotional game design. Launching 2026.',
+      tracks: ['Habit loops', 'Emotional game design', 'Team lead'] },
+    { name: 'NextBeat', brand: 'NextBeat', yr: '24', shell: 'purple', img: 'screenies/beatstar.gif', role: 'Founding Product Lead · 2024–2025',
+      blurb: 'Prototyped music gaming and learning apps as a founding product lead, then got acquired by Duolingo.',
+      tracks: ['0 → 1', 'Rapid prototyping', 'Acquired by Duolingo'] },
+    { name: 'Beatstar', brand: 'Space Ape', yr: '22', shell: 'sky', img: 'screenies/beatstar.gif', role: 'Product Lead · 2022–2024',
+      blurb: 'Product lead on a top mobile music game with $100M+ lifetime revenue. Experiments, features, labels, publishers and data.',
+      tracks: ['$100M+ lifetime revenue', 'Live ops', 'Experimentation'] },
+    { name: 'Country Star', brand: 'Space Ape', yr: '23', shell: 'amber', img: 'screenies/countrystar.gif', role: 'Product Lead · launch',
+      blurb: 'Launched a country music spin-off of Beatstar, which grossed $10M+ because country fans wanted a game so badly.',
+      tracks: ['$10M+ gross', 'New audience', 'Launch'] },
+    { name: 'Super Cricket 3', brand: 'Super Cricket', yr: '25', shell: 'green', img: 'screenies/sc3.gif', role: 'Founder & solo dev',
+      blurb: 'The newest chapter of my solo-made cricket franchise: design, code, art and live ops.',
+      tracks: ['Solo dev', 'F2P', 'Global audience'], link: 'https://play.google.com/store/apps/details?id=com.nklsrh.supercricket3' },
+    { name: 'Super Cricket 2', brand: 'Super Cricket', yr: '15', shell: 'white', img: 'screenies/sc2.png', role: 'Founder & solo dev · 2015–now',
+      blurb: 'Live since 2015 and peaked at 30K DAU. The franchise has been played by 2M+ cricket fans. Still not sure why.',
+      tracks: ['2M+ players', '30K DAU peak', 'Live since 2015'], link: 'https://play.google.com/store/apps/details?id=com.nklsrh.supercrickethd' },
+    { name: 'Prototypes', brand: 'Space Ape', yr: '20', shell: 'smoke', img: 'screenies/fast.gif', role: 'Product Engineering Lead · 2018–2022',
+      blurb: 'Soft-launched (and killed) a bucketload of games hunting for product/market fit. Live ops on Transformers: Earth Wars and Treasure Tails.',
+      tracks: ['Soft launch', 'Kill fast', 'Unity / C#'] },
+    { name: 'Death Squared', brand: 'SMG Studio', yr: '17', shell: 'pink', img: 'screenies/ds2.gif', role: 'Software Engineer · 2015–2018',
+      blurb: 'Gameplay, UI, physics and plugins across PS4, Xbox One and Steam. Also Thumb Drift, Hasbro’s Risk and Fast & Furious: Takedown.',
+      tracks: ['Console', 'Gameplay', 'Plugins'] },
+    { name: 'BLASTR', brand: 'Indie', yr: '11', shell: 'magenta', img: 'screenies/blastr3.gif', role: 'Solo dev · student',
+      blurb: 'Won Best Game at iFEST 2011 and showcased at PAX Australia 2014. Where it all started.',
+      tracks: ['iFEST winner', 'PAX Aus 2014', 'Featured in Game Informer'] },
+    { name: 'Air Racing', brand: 'Indie', yr: '13', shell: 'clear', img: 'screenies/ar3.gif', role: 'Solo dev',
+      blurb: 'A Microsoft Appreneur-winning arcade racer, from the era of Windows Phone.',
+      tracks: ['Appreneur winner', 'Windows Phone', 'Android'], link: 'https://play.google.com/store/apps/details?id=com.nklsrh.airracing' }
+  ];
+
+  var table = document.getElementById('table');
+  var tilts = [-6, 4, -3, 7, -2, 5, -7, 3, -4, 6];
+  discs.forEach(function (d, i) {
+    var b = document.createElement('button');
+    b.className = 'md ' + d.shell;
+    b.style.setProperty('--r', tilts[i % tilts.length] + 'deg');
+    b.setAttribute('aria-label', d.name + ', open details');
+    b.innerHTML =
+      '<span class="shutter"></span><span class="insert">insert this end ▲</span>' +
+      '<span class="disc"></span>' +
+      '<span class="label"><span class="yr">’' + d.yr + '</span><span class="name">' + d.name + '</span></span>' +
+      '<span class="side">' + d.role.split(' · ')[0] + '</span>';
+    b.addEventListener('click', function () { open(d); });
+    table.appendChild(b);
+  });
+
+  var dlg = document.getElementById('case');
+  function open(d) {
+    dlg.querySelector('.art img').src = d.img;
+    dlg.querySelector('.brand').textContent = d.brand + ' · ’' + d.yr;
+    dlg.querySelector('h2').textContent = d.name;
+    dlg.querySelector('.meta').textContent = d.role;
+    dlg.querySelector('.blurb').textContent = d.blurb;
+    var ol = dlg.querySelector('.tracks');
+    ol.innerHTML = d.tracks.map(function (t) { return '<li>' + t + '</li>'; }).join('') +
+      (d.link ? '' : '');
+    var old = dlg.querySelector('.play'); if (old) old.remove();
+    if (d.link) { var a = document.createElement('a'); a.className = 'play'; a.href = d.link; a.target = '_blank'; a.rel = 'noopener'; a.textContent = '▶ Play it'; dlg.querySelector('.notes').appendChild(a); }
+    dlg.showModal();
+  }
+  dlg.querySelector('.close').addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+</script>
+</body>
+</html>
