@@ -58,13 +58,13 @@
   /* the disc sits behind the insert and slides out on hover */
   .disc {
     position: absolute; z-index: 0; left: 9%; top: 5%; width: 88%; aspect-ratio: 1; border-radius: 50%; overflow: hidden;
-    background: #e9eaee var(--art) center / cover no-repeat;
+    background: conic-gradient(from 20deg, #e4e6ea, #c3eefc, #edd0fb, #fdf0b6, #cff9dc, #e4e6ea 30%, #f7f7f9, #b9e3fb, #fbcbea, #fdf4c4, #e4e6ea 70%, #cbe6fb, #e4e6ea);
     box-shadow: inset 0 0 0 1px rgba(0,0,0,.15), 4px 6px 14px -6px rgba(0,0,0,.35);
     transition: transform .6s cubic-bezier(.2,.8,.2,1);
   }
   .slot:hover .disc, .md:focus-visible .disc { transform: translateX(46%) rotate(120deg); }
   /* rainbow sheen and a light streak across the disc surface */
-  .disc::before { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: 50%; mix-blend-mode: screen; opacity: .4;
+  .disc::before { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: 50%; mix-blend-mode: screen; opacity: .8;
     background:
       linear-gradient(125deg, transparent 30%, rgba(255,255,255,.5) 45%, transparent 55%),
       conic-gradient(from 30deg, transparent, #9fe8ff 8%, #f2b8ff 14%, #fff0a0 20%, transparent 28%, transparent 50%, #a8dcff 58%, #ffc0ea 64%, #fff3b0 70%, transparent 78%); }
@@ -196,12 +196,12 @@
     { name: 'Beatstar', art: 'screenies/beatstar.gif', brand: 'Space Ape', yr: '22', shell: 'sky', img: 'screenies/beatstar.gif', role: 'Product Lead · 2022–2024',
       blurb: 'Product lead on a top mobile music game with $100M+ lifetime revenue. Experiments, features, labels, publishers and data.',
       tracks: ['$100M+ lifetime revenue', 'Live ops', 'Experimentation'] },
-    { name: 'Country Star', art: 'images/covers/country-star.png', brand: 'Space Ape', yr: '23', shell: 'amber', img: 'screenies/countrystar.gif', role: 'Product Lead · launch',
-      blurb: 'Launched a country music spin-off of Beatstar, which grossed $10M+ because country fans wanted a game so badly.',
-      tracks: ['$10M+ gross', 'New audience', 'Launch'] },
     { name: 'Super Cricket 3', art: 'images/covers/super-cricket-3.png', brand: 'Super Cricket', yr: '25', shell: 'green', img: 'screenies/sc3.gif', role: 'Founder & solo dev',
       blurb: 'The newest chapter of my solo-made cricket franchise: design, code, art and live ops.',
       tracks: ['Solo dev', 'F2P', 'Global audience'], link: 'https://play.google.com/store/apps/details?id=com.nklsrh.supercricket3' },
+    { name: 'Country Star', art: 'images/covers/country-star.png', brand: 'Space Ape', yr: '23', shell: 'amber', img: 'screenies/countrystar.gif', role: 'Product Lead · launch',
+      blurb: 'Launched a country music spin-off of Beatstar, which grossed $10M+ because country fans wanted a game so badly.',
+      tracks: ['$10M+ gross', 'New audience', 'Launch'] },
     { name: 'Super Cricket 2', art: 'images/covers/super-cricket-2.png', brand: 'Super Cricket', yr: '15', shell: 'white', img: 'screenies/sc2.png', role: 'Founder & solo dev · 2015–now',
       blurb: 'Live since 2015 and peaked at 30K DAU. The franchise has been played by 2M+ cricket fans. Still not sure why.',
       tracks: ['2M+ players', '30K DAU peak', 'Live since 2015'], link: 'https://play.google.com/store/apps/details?id=com.nklsrh.supercrickethd' },
