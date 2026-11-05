@@ -21,6 +21,7 @@
     color: var(--ink);
     font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
     min-height: 100vh;
+    overflow-x: clip;
   }
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
 
@@ -33,81 +34,67 @@
   /* ---------- the table of discs ---------- */
   .table { display: grid; grid-template-columns: repeat(5, 1fr); gap: 28px 22px; padding: 48px 0 80px; }
 
+  .slot { position: relative; }
+  .slot.featured { grid-column: span 2; grid-row: span 2; }
+
+  /* a jewel case: tinted tray, cover insert behind clear plastic, disc inside */
   .md {
     --shell: 200, 205, 215;
     --a: .45;
-    position: relative;
+    position: relative; display: block; width: 100%;
     aspect-ratio: 1;
-    border: 0; padding: 0; cursor: pointer; text-align: left; color: var(--ink);
-    border-radius: 9px 9px 9px 9px;
-    background:
-      linear-gradient(135deg, rgba(255,255,255,.55), rgba(255,255,255,0) 40%),
-      rgba(var(--shell), var(--a));
-    box-shadow:
-      inset 0 0 0 1.5px rgba(255,255,255,.65),
-      inset 0 -6px 12px rgba(var(--shell), .35),
-      14px 18px 26px -14px rgba(40, 52, 72, .45);
-    -webkit-backdrop-filter: blur(1.5px); backdrop-filter: blur(1.5px);
+    border: 0; padding: 0; cursor: pointer; color: var(--ink);
+    border-radius: 5px;
+    background: rgba(var(--shell), var(--a));
+    box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.6), 14px 18px 26px -14px rgba(40, 52, 72, .45);
     transform: rotate(var(--r, 0deg));
     transition: transform .35s cubic-bezier(.3, 1.6, .5, 1), box-shadow .35s;
   }
-  .md:hover, .md:focus-visible { transform: rotate(0deg) translateY(-8px) scale(1.04); z-index: 2; outline: none;
-    box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.7), inset 0 -6px 12px rgba(var(--shell), .35), 18px 30px 36px -16px rgba(40,52,72,.5); }
+  .slot:hover .md, .md:focus-visible { transform: rotate(0deg) translateY(-6px); outline: none;
+    box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.7), 18px 30px 36px -16px rgba(40,52,72,.5); }
+  .slot:hover { z-index: 2; }
 
-  /* moulded ridges along the edges */
-  .md::before { content: ""; position: absolute; inset: 6px; border-radius: 6px; border: 1px solid rgba(255,255,255,.35); pointer-events: none; }
-  .md::after { content: ""; position: absolute; left: 10px; right: 10px; bottom: 7px; height: 9px; border-radius: 2px; pointer-events: none;
-    background: repeating-linear-gradient(90deg, rgba(255,255,255,.45) 0 2px, transparent 2px 6px); opacity: .7; }
-
+  /* the disc sits behind the insert and slides out on hover */
   .disc {
-    position: absolute; left: 13%; top: 10%; width: 68%; aspect-ratio: 1; border-radius: 50%; overflow: hidden;
+    position: absolute; z-index: 0; left: 9%; top: 5%; width: 88%; aspect-ratio: 1; border-radius: 50%; overflow: hidden;
     background: #e9eaee var(--art) center / cover no-repeat;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,.12);
-    transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.15), 4px 6px 14px -6px rgba(0,0,0,.35);
+    transition: transform .6s cubic-bezier(.2,.8,.2,1);
   }
+  .slot:hover .disc, .md:focus-visible .disc { transform: translateX(46%) rotate(120deg); }
   /* engraved rings: grooves, the clamping ring, the hub and the rim */
   .disc::after { content: ""; position: absolute; inset: 0; border-radius: 50%;
     background:
       radial-gradient(circle, #8a919c 0 8%, #e6e8ec 8.5% 15%, rgba(0,0,0,.35) 15.3%, transparent 15.8% 22%, rgba(255,255,255,.55) 22.3%, rgba(0,0,0,.18) 22.7%, transparent 23.2%),
       repeating-radial-gradient(circle, transparent 0 5px, rgba(0,0,0,.07) 5px 5.6px, transparent 5.6px 9px, rgba(255,255,255,.12) 9px 9.5px),
       radial-gradient(circle, transparent 0 96.5%, rgba(255,255,255,.7) 97%, rgba(0,0,0,.25) 98.5%, transparent 99.5%); }
-  /* the jewel case plastic sits over the disc, so the shine lives on the case */
-  .gloss { position: absolute; inset: 0; border-radius: 9px; pointer-events: none;
-    background:
-      linear-gradient(115deg, rgba(255,255,255,0) 18%, rgba(255,255,255,.55) 24%, rgba(255,255,255,0) 31%),
-      linear-gradient(115deg, rgba(255,255,255,0) 52%, rgba(255,255,255,.28) 55%, rgba(255,255,255,0) 60%),
-      linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,255,255,0) 22%); }
-  .md:hover .disc { transform: rotate(240deg); }
 
-  .shutter { position: absolute; top: 0; left: 14%; width: 46%; height: 13%; border-radius: 0 0 4px 4px;
-    background: linear-gradient(180deg, rgba(255,255,255,.7), rgba(var(--shell), .6)); box-shadow: inset 0 -1px 0 rgba(0,0,0,.08); }
+  .cover { position: absolute; z-index: 1; top: 3.5%; bottom: 3.5%; left: 11%; right: 3.5%; border-radius: 2px;
+    background: #ddd var(--art) center / cover no-repeat; box-shadow: 0 0 0 1px rgba(0,0,0,.08); }
+
   /* hinge down the left edge, in a deeper tint of the shell */
-  .hinge { position: absolute; left: 0; top: 0; bottom: 0; width: 8%; border-radius: 9px 0 0 9px;
-    background: linear-gradient(90deg, rgba(0,0,0,.18), rgba(0,0,0,0) 70%), repeating-linear-gradient(180deg, rgba(var(--shell), 1) 0 4px, rgba(var(--shell), .7) 4px 7px);
+  .hinge { position: absolute; z-index: 2; left: 0; top: 0; bottom: 0; width: 9%; border-radius: 5px 0 0 5px;
+    background: linear-gradient(90deg, rgba(0,0,0,.2), rgba(0,0,0,0) 70%), repeating-linear-gradient(180deg, rgba(var(--shell), 1) 0 4px, rgba(var(--shell), .7) 4px 7px);
     box-shadow: inset -1px 0 0 rgba(255,255,255,.5); }
-  .shutter { left: 20% !important; }
+  .hinge::before, .hinge::after { content: ""; position: absolute; left: 30%; width: 40%; height: 7%; border-radius: 2px; background: rgba(255,255,255,.55); }
+  .hinge::before { top: 6%; } .hinge::after { bottom: 6%; }
 
-  /* featured release */
-  .md.featured { grid-column: span 2; grid-row: span 2; }
-  .featured .label { padding: 14px 16px 14px; }
-  .featured .label .name { font-size: clamp(18px, 2.4vw, 30px); }
-  .featured .label .yr { font-size: 14px; }
-  .featured .side { font-size: 15px; }
-  .sticker { position: absolute; right: 5%; top: 7%; z-index: 1; width: 92px; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; text-align: center;
+  /* clear plastic lid: the shine lives here */
+  .gloss { position: absolute; z-index: 3; inset: 0; border-radius: 5px; pointer-events: none;
+    background:
+      linear-gradient(115deg, rgba(255,255,255,0) 18%, rgba(255,255,255,.5) 24%, rgba(255,255,255,0) 31%),
+      linear-gradient(115deg, rgba(255,255,255,0) 52%, rgba(255,255,255,.25) 55%, rgba(255,255,255,0) 60%),
+      linear-gradient(180deg, rgba(255,255,255,.3), rgba(255,255,255,0) 20%);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.7), inset 0 0 0 4px rgba(var(--shell), .35); }
+
+  .sticker { position: absolute; z-index: 4; right: -14px; top: -14px; width: 92px; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; text-align: center;
     background: #ffde3a; color: #1f2430; font: 900 12px/1.05 "Arial Black", Arial, sans-serif; text-transform: uppercase; transform: rotate(12deg);
     box-shadow: 0 2px 0 rgba(0,0,0,.12); }
 
-  .label {
-    position: absolute; right: 7%; bottom: 14%; width: 44%; padding: 8px 9px 9px;
-    background: var(--label); border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(0,0,0,.08), inset 0 0 0 1px rgba(0,0,0,.04);
-  }
-  .label .brand { display: block; padding-right: 22px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font: 700 9px/1 "Helvetica Neue", Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--soft); }
-  .label .name { display: block; margin-top: 0;  font: 900 14px/1.05 "Arial Black", "Helvetica Neue", Arial, sans-serif; letter-spacing: -0.02em; }
-  .label .yr { display: block; margin-bottom: 3px; font: 900 11px/1 "Arial Black", Arial, sans-serif; color: var(--stripe, #2a62d4); }
-  .label::after { content: ""; display: block; height: 4px; margin-top: 7px; background: var(--stripe, #2a62d4); border-radius: 1px; }
-
-  .side { position: absolute; left: 9%; bottom: 7%; font: italic 700 11px/1 Georgia, serif; color: rgba(255,255,255,.9); text-shadow: 0 1px 0 rgba(0,0,0,.12); letter-spacing: .04em; }
+  .cap { margin-top: 14px; }
+  .cap b { display: block; font: 900 14px/1.15 "Arial Black", "Helvetica Neue", Arial, sans-serif; letter-spacing: -0.01em; }
+  .cap span { font: 11px/1.4 "Courier New", monospace; text-transform: uppercase; letter-spacing: .06em; color: var(--soft); }
+  .featured .cap b { font-size: 22px; }
 
   /* shells: translucent plastic colours from the references */
   .clear   { --shell: 214, 220, 228; --a: .35; --stripe: #1f2430; }
@@ -166,7 +153,7 @@
 <div class="wrap">
   <header>
     <h1>nikhil suresh<small>Gamification &amp; product leader. Every disc is something I helped make.</small></h1>
-    <div class="tracklist"><b>Discography</b><br>1 side · 10 tracks · 2011–2026<br>tap a disc to open the case</div>
+    <div class="tracklist"><b>Discography</b><br>1 side · 11 tracks · 2011–2026<br>tap a disc to open the case</div>
   </header>
 
   <main class="table" id="table"></main>
@@ -193,7 +180,7 @@
 
 <script>
   var discs = [
-    { name: 'Duolingo Music', featured: true, art: 'images/logos/duolingo.png', brand: 'Duolingo', yr: '26', shell: 'lime', img: 'screenies/beatstar.gif', role: 'Senior Product Manager · 2025–now',
+    { name: 'Duolingo Music', featured: true, art: 'images/covers/duolingo-music.png', caseArt: 'images/covers/duolingo-music-wide.webp', brand: 'Duolingo', yr: '26', shell: 'lime', img: 'screenies/beatstar.gif', role: 'Senior Product Manager · 2025–now',
       blurb: 'Leading a team making music learning genuinely fun, with retention psychology, habit formation and emotional game design. Launching 2026.',
       tracks: ['Habit loops', 'Emotional game design', 'Team lead'] },
     { name: 'NextBeat', art: 'images/logos/nextbeat.png', brand: 'NextBeat', yr: '24', shell: 'purple', img: 'screenies/beatstar.gif', role: 'Founding Product Lead · 2024–2025',
@@ -208,15 +195,18 @@
     { name: 'Super Cricket 3', art: 'sc3/assets/dare_preview.jpg', brand: 'Super Cricket', yr: '25', shell: 'green', img: 'screenies/sc3.gif', role: 'Founder & solo dev',
       blurb: 'The newest chapter of my solo-made cricket franchise: design, code, art and live ops.',
       tracks: ['Solo dev', 'F2P', 'Global audience'], link: 'https://play.google.com/store/apps/details?id=com.nklsrh.supercricket3' },
-    { name: 'Super Cricket 2', art: 'sc2/icon.png', brand: 'Super Cricket', yr: '15', shell: 'white', img: 'screenies/sc2.png', role: 'Founder & solo dev · 2015–now',
+    { name: 'Super Cricket 2', art: 'images/covers/super-cricket-2.png', brand: 'Super Cricket', yr: '15', shell: 'white', img: 'screenies/sc2.png', role: 'Founder & solo dev · 2015–now',
       blurb: 'Live since 2015 and peaked at 30K DAU. The franchise has been played by 2M+ cricket fans. Still not sure why.',
       tracks: ['2M+ players', '30K DAU peak', 'Live since 2015'], link: 'https://play.google.com/store/apps/details?id=com.nklsrh.supercrickethd' },
     { name: 'Prototypes', art: 'images/logos/spaceape.png', brand: 'Space Ape', yr: '20', shell: 'smoke', img: 'screenies/fast.gif', role: 'Product Engineering Lead · 2018–2022',
       blurb: 'Soft-launched (and killed) a bucketload of games hunting for product/market fit. Live ops on Transformers: Earth Wars and Treasure Tails.',
       tracks: ['Soft launch', 'Kill fast', 'Unity / C#'] },
-    { name: 'Death Squared', art: 'screenies/ds1.jpg', brand: 'SMG Studio', yr: '17', shell: 'pink', img: 'screenies/ds2.gif', role: 'Software Engineer · 2015–2018',
+    { name: 'Death Squared', art: 'images/covers/death-squared.webp', brand: 'SMG Studio', yr: '17', shell: 'pink', img: 'screenies/ds2.gif', role: 'Software Engineer · 2015–2018',
       blurb: 'Gameplay, UI, physics and plugins across PS4, Xbox One and Steam. Also Thumb Drift, Hasbro’s Risk and Fast & Furious: Takedown.',
       tracks: ['Console', 'Gameplay', 'Plugins'] },
+    { name: 'Fast & Furious: Takedown', brand: 'SMG Studio', yr: '17', shell: 'smoke', art: 'images/covers/fast-furious.webp', img: 'screenies/fast.gif', role: 'Software Engineer · 2015–2018',
+      blurb: 'Client work at SMG Studio on the official Fast & Furious mobile racer: gameplay, UI and physics.',
+      tracks: ['Licensed IP', 'Racing', 'Unity / C#'] },
     { name: 'BLASTR', art: 'games/blastr.png', brand: 'Indie', yr: '11', shell: 'magenta', img: 'screenies/blastr3.gif', role: 'Solo dev · student',
       blurb: 'Won Best Game at iFEST 2011 and showcased at PAX Australia 2014. Where it all started.',
       tracks: ['iFEST winner', 'PAX Aus 2014', 'Featured in Game Informer'] },
@@ -228,23 +218,26 @@
   var table = document.getElementById('table');
   var tilts = [-6, 4, -3, 7, -2, 5, -7, 3, -4, 6];
   discs.forEach(function (d, i) {
+    var slot = document.createElement('div');
+    slot.className = 'slot' + (d.featured ? ' featured' : '');
     var b = document.createElement('button');
-    b.className = 'md ' + d.shell + (d.featured ? ' featured' : '');
+    b.className = 'md ' + d.shell;
     b.style.setProperty('--art', 'url("' + d.art + '")');
-    b.style.setProperty('--r', (d.featured ? -2 : tilts[i % tilts.length]) + 'deg');
+    b.style.setProperty('--r', (d.featured ? -1.5 : tilts[i % tilts.length] / 2) + 'deg');
     b.setAttribute('aria-label', d.name + ', open details');
-    b.innerHTML =
-      '<span class="hinge"></span><span class="shutter"></span>' + (d.featured ? '<span class="sticker">New<br>release<br>2026</span>' : '') +
-      '<span class="disc"></span><span class="gloss"></span>' +
-      '<span class="label"><span class="yr">’' + d.yr + '</span><span class="name">' + d.name + '</span></span>' +
-      '<span class="side">' + d.role.split(' · ')[0] + '</span>';
+    b.innerHTML = '<span class="disc"></span><span class="cover"></span><span class="hinge"></span><span class="gloss"></span>' +
+      (d.featured ? '<span class="sticker">New<br>release<br>2026</span>' : '');
     b.addEventListener('click', function () { open(d); });
-    table.appendChild(b);
+    var cap = document.createElement('div');
+    cap.className = 'cap';
+    cap.innerHTML = '<b>' + d.name + '</b><span>’' + d.yr + ' · ' + d.role.split(' · ')[0] + '</span>';
+    slot.appendChild(b); slot.appendChild(cap);
+    table.appendChild(slot);
   });
 
   var dlg = document.getElementById('case');
   function open(d) {
-    dlg.querySelector('.art img').src = d.img;
+    dlg.querySelector('.art img').src = d.caseArt || d.img;
     dlg.querySelector('.brand').textContent = d.brand + ' · ’' + d.yr;
     dlg.querySelector('h2').textContent = d.name;
     dlg.querySelector('.meta').textContent = d.role;
