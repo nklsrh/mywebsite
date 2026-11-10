@@ -131,7 +131,8 @@
   .case::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 18px; z-index: 1;
     background: repeating-linear-gradient(180deg, rgba(255,255,255,.7) 0 2px, rgba(200,208,220,.6) 2px 5px); border-right: 1px solid rgba(0,0,0,.06); }
   .case .art { background: #111; height: min(520px, 70vh); }
-  .case .art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .case .art img, .case .art video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .case .art [hidden] { display: none; }
   .case .notes { padding: 28px 30px 30px; }
   .case .brand { font: 700 11px/1 "Helvetica Neue", Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--soft); }
   .case h2 { margin: 8px 0 4px; font: 900 30px/1.05 "Arial Black", Arial, sans-serif; letter-spacing: -0.02em; }
@@ -176,7 +177,7 @@
 <dialog id="case">
   <div class="case">
     <button class="close" aria-label="Close">×</button>
-    <div class="art"><img alt=""></div>
+    <div class="art"><img alt=""><video muted loop playsinline preload="none"></video></div>
     <div class="notes">
       <div class="brand"></div>
       <h2></h2>
@@ -195,7 +196,7 @@
     { name: 'NextBeat', art: 'images/covers/nextbeat.png', brand: 'NextBeat', yr: '24', shell: 'purple', img: 'images/covers/nextbeat-bloomberg.jpg', fit: 'contain', role: 'Founding Product Lead · 2024–2025',
       blurb: 'Prototyped music gaming and learning apps as a founding product lead, then got acquired by Duolingo.',
       tracks: ['0 → 1', 'Rapid prototyping', 'Acquired by Duolingo', 'As seen on Bloomberg Tech'] },
-    { name: 'Beatstar', art: 'screenies/beatstar.gif', brand: 'Space Ape', yr: '22', shell: 'sky', img: 'screenies/beatstar.gif', role: 'Product Lead · 2022–2024',
+    { name: 'Beatstar', art: 'screenies/beatstar.gif', brand: 'Space Ape', yr: '22', shell: 'sky', img: 'media/beatstar-poster.jpg', video: 'media/beatstar.mp4', poster: 'media/beatstar-poster.jpg', role: 'Product Lead · 2022–2024',
       blurb: 'Product lead on a top mobile music game with $100M+ lifetime revenue. Experiments, features, labels, publishers and data.',
       tracks: ['$100M+ lifetime revenue', 'Live ops', 'Experimentation'] },
     { name: 'Super Cricket 3', art: 'images/covers/super-cricket-3.png', brand: 'Super Cricket', yr: '25', shell: 'green', img: 'screenies/sc3.gif', role: 'Founder & solo dev',
@@ -234,9 +235,10 @@
 
   var dlg = document.getElementById('case');
   function open(d) {
-    var art = dlg.querySelector('.art img');
-    art.src = d.caseArt || d.img;
-    art.style.objectFit = d.fit || 'cover';
+    var art = dlg.querySelector('.art img'), vid = dlg.querySelector('.art video');
+    art.hidden = !!d.video; vid.hidden = !d.video;
+    if (d.video) { vid.poster = d.poster || ''; vid.src = d.video; vid.play().catch(function () {}); }
+    else { vid.pause(); vid.removeAttribute('src'); art.src = d.caseArt || d.img; art.style.objectFit = d.fit || 'cover'; }
     dlg.querySelector('.brand').textContent = d.brand + ' · ’' + d.yr;
     dlg.querySelector('h2').textContent = d.name;
     dlg.querySelector('.meta').textContent = d.role;
@@ -249,6 +251,7 @@
     dlg.showModal();
   }
   dlg.querySelector('.close').addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('close', function () { dlg.querySelector('.art video').pause(); });
   dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
 </script>
 </body>
