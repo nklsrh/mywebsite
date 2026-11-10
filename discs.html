@@ -192,9 +192,9 @@
     { name: 'Duolingo Music', featured: true, art: 'images/covers/duolingo-music.png', caseArt: 'images/covers/duolingo-music-wide.webp', brand: 'Duolingo', yr: '26', shell: 'lime', img: 'screenies/beatstar.gif', role: 'Senior Product Manager · 2025–now',
       blurb: 'Leading a team making music learning genuinely fun, with retention psychology, habit formation and emotional game design. Launching 2026.',
       tracks: ['Habit loops', 'Emotional game design', 'Team lead'] },
-    { name: 'NextBeat', art: 'images/covers/nextbeat.png', brand: 'NextBeat', yr: '24', shell: 'purple', img: 'screenies/beatstar.gif', role: 'Founding Product Lead · 2024–2025',
+    { name: 'NextBeat', art: 'images/covers/nextbeat.png', brand: 'NextBeat', yr: '24', shell: 'purple', img: 'images/covers/nextbeat-bloomberg.jpg', fit: 'contain', role: 'Founding Product Lead · 2024–2025',
       blurb: 'Prototyped music gaming and learning apps as a founding product lead, then got acquired by Duolingo.',
-      tracks: ['0 → 1', 'Rapid prototyping', 'Acquired by Duolingo'] },
+      tracks: ['0 → 1', 'Rapid prototyping', 'Acquired by Duolingo', 'As seen on Bloomberg Tech'] },
     { name: 'Beatstar', art: 'screenies/beatstar.gif', brand: 'Space Ape', yr: '22', shell: 'sky', img: 'screenies/beatstar.gif', role: 'Product Lead · 2022–2024',
       blurb: 'Product lead on a top mobile music game with $100M+ lifetime revenue. Experiments, features, labels, publishers and data.',
       tracks: ['$100M+ lifetime revenue', 'Live ops', 'Experimentation'] },
@@ -234,7 +234,9 @@
 
   var dlg = document.getElementById('case');
   function open(d) {
-    dlg.querySelector('.art img').src = d.caseArt || d.img;
+    var art = dlg.querySelector('.art img');
+    art.src = d.caseArt || d.img;
+    art.style.objectFit = d.fit || 'cover';
     dlg.querySelector('.brand').textContent = d.brand + ' · ’' + d.yr;
     dlg.querySelector('h2').textContent = d.name;
     dlg.querySelector('.meta').textContent = d.role;
